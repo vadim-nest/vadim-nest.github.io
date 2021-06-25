@@ -1,0 +1,121 @@
+/*
+  Colours:
+    white:  #FFFFFF
+    black:  #222222
+    yellow: #FFCC02
+    red:    #EE0000
+*/
+
+body {
+  background: #ffffff;
+  font-family: "Open Sans", sans-serif;
+  height: 100%;
+}
+.wrapper {
+  width: 800px;
+  margin: 30px auto;
+  color: #222222;
+  text-align: center;
+}
+/* Tens and the dot font is smalller, added padding for centering */
+#tens {
+  /* padding-right: 11.9px; */
+  padding-right: 14.03px;
+}
+.runningLap {
+  width: 800px;
+  margin: 30px auto;
+  color: #ffffff;
+  text-align: center;
+  font-size: 1.4em;
+}
+.laps {
+  width: 800px;
+  margin: 30px auto;
+  color: #ffffff;
+  text-align: center;
+  font-size: 1.4em;
+}
+.lap {
+  width: 800px;
+}
+h1 {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 100;
+  font-size: 2.6em;
+}
+h2 {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 100;
+  font-size: 1.5em;
+}
+h3 {
+  font-family: "Open Sans", sans-serif;
+  font-weight: 100;
+  font-size: 30px;
+}
+#minutes,
+#seconds {
+  color: #222222;
+  font-size: 2em;
+}
+#hours {
+  color: #ffffff;
+  font-size: 2em;
+}
+#tens {
+  color: #ffffff;
+  font-size: 1.35em;
+}
+.hidden,
+.lapDash {
+  color: #ffffff;
+}
+#seconds {
+  color: #222222;
+}
+.dots {
+  font-size: 1.4em;
+}
+.lastDots {
+  font-size: 0.9em;
+}
+
+button {
+  -moz-border-radius: 5px;
+  -webkit-border-radius: 5px;
+  border-radius: 20px;
+  -khtml-border-radius: 5px;
+  background: #bee265;
+  color: #222222;
+  border: solid 3px #bee265;
+  text-decoration: none;
+  cursor: pointer;
+  font-size: 1.2em;
+  padding: 12px 10px;
+  width: 150px;
+  margin: 10px;
+  outline: none;
+  -webkit-transition: all 0.4s ease-in-out;
+}
+#button-lap-reset {
+  background: #ffffff;
+  border: solid 3px #ebebeb;
+  color: #ebebeb;
+}
+.lineBreak {
+  color: #a3a3a3;
+  border: 0.5px solid #ebebeb;
+  border-radius: 5px;
+  width: 150px;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+/*  Removing space between the running and the next laps   */
+.laps {
+  margin-top: 0;
+}
+.runningLap {
+  margin-bottom: 0;
+}
