@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en" dit="ltr">
+    <head>
+        <meta charset="UTF-8"/>
+        <meta name="author" content="Vadim Gnezdyshkin">
+        <meta name="description" content="This is a simple JavaScript StopWatch for my portfolio">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>JavaScript Stopwatch</title>
+        <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500&family=Open+Sans&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="/stopwatch/css/SWstyles.css">
+        <script type="module" src="/stopwatch/SWscript.js"></script>
+    </head>
+    <body>
+        <div class="wrapper">
+          <h1>Stopwatch</h1>
+          <p class="time"><span id="hours", class="hidden">00</span><span class="hidden dots">:</span><span id="minutes">00</span><span class="dots">:</span><span id="seconds">00</span><span class="hidden dots lastDots">.</span><span id="tens", class="hidden">00</span></p>
+          <button id="button-start">Start</button>
+          <button id="button-lap-reset">Lap</button>
+        </div> 
+        <div class="runningLap">
+            <p class="timeLaps lap">Lap <span id="lapsCounter">1</span>  <span class="lapDash">-</span>  <span id="hoursLaps", class="hiddenLaps hiddenHoursLaps">00</span><span id="hoursDotsLaps" class="hiddenLaps dotsLaps">:</span><span id="minutesLaps">00</span><span class="dotsLaps">:</span><span id="secondsLaps">00</span><span class="hiddenLaps dotsLaps">.</span><span id="tensLaps", class="hiddenLaps">00</span></p>
+        </div>
+        <div class="laps">
+            <!-- I think, you're not using hiddenLaps class, so remove it -->
+            <p id="forPrependLaps"></p>
+        </div>
+    </body>
+</html>
+
