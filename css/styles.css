@@ -185,6 +185,7 @@ p {
   /* temp border */
   /* border: 2px solid #ffdb4d; */
   /* border-right: 1px solid #e7e7e7; */
+  /* border-radius: 50%; */
 }
 #aboutProjects {
   flex: 6;
