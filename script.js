@@ -263,6 +263,40 @@ window.onload = function () {
     }
     
 
+    ////////////////////////////////////////////
+    // Responsive Design
+    ///////////////////////////////////////////
+    // window.addEventListener("resize", displayWindowSize);
+    let mobile = false;
+    window.onresize = function(event) { 
+        responsiveDesign();
+    };
+
+
+    function responsiveDesign() {
+        if(window.innerWidth >= 600) {
+            if(mobile) {
+
+                // Toggle Dark Theme button
+                buttonDarkTheme.classList.toggle("fas");
+                buttonDarkTheme.classList.toggle("fa-adjust");
+                buttonDarkTheme.classList.toggle("fa-2x");
+            }
+            mobile = false;
+        } else if (window.innerWidth < 600){
+            if(!mobile) {
+
+                // Toggle Dark Theme button
+                buttonDarkTheme.classList.toggle("fas");
+                buttonDarkTheme.classList.toggle("fa-adjust");
+                buttonDarkTheme.classList.toggle("fa-2x");
+            }
+            mobile = true;
+        }
+    };
+
+    responsiveDesign();
+
 
 
     window.onscroll = function() {
@@ -324,23 +358,23 @@ window.onload = function () {
 
 
         // Hiding Contact Floating Button when reach Contact Section
-        let floatingButtonLocation =  elementLocation(document.querySelector("#contact-float")).top;
-        document.querySelector("#contact-float").style.transition = "all 0.2s ease-in-out";
-        if (floatingButtonLocation >= contactPageStart && !buttonHidden) {
-            buttonHidden = true;
-            for(let i = contactButtonRight; i < window.innerWidth; ++i) {
-                setTimeout(() => {
-                    contactButton.style.right = (contactButtonRight - i).toString() + "px";
-                }, i * 0.3);
-            }
-        } else if (floatingButtonLocation <= contactPageStart && buttonHidden) {
-            buttonHidden = false;
-            for(let i = window.innerWidth; i > (contactButtonRight); --i) {
-                setTimeout(() => {
-                    contactButton.style.right = (window.innerWidth - i + 90).toString() + "px";
-                }, i * 0.4);
-            }
-        }
+        // let floatingButtonLocation =  elementLocation(document.querySelector("#contact-float")).top;
+        // document.querySelector("#contact-float").style.transition = "all 0.2s ease-in-out";
+        // if (floatingButtonLocation >= contactPageStart && !buttonHidden) {
+        //     buttonHidden = true;
+        //     for(let i = contactButtonRight; i < window.innerWidth; ++i) {
+        //         setTimeout(() => {
+        //             contactButton.style.right = (contactButtonRight - i).toString() + "px";
+        //         }, i * 0.3);
+        //     }
+        // } else if (floatingButtonLocation <= contactPageStart && buttonHidden) {
+        //     buttonHidden = false;
+        //     for(let i = window.innerWidth; i > (contactButtonRight); --i) {
+        //         setTimeout(() => {
+        //             contactButton.style.right = (window.innerWidth - i + 90).toString() + "px";
+        //         }, i * 0.4);
+        //     }
+        // }
 
         // Changing red border in header on scroll
         buttonAbout.style.transition = "all 0.4s ease-in-out";
