@@ -264,7 +264,7 @@ p {
   text-align: top;
 }
 /* Instagram logo on hover (gradient) */
-.fa-instagram:hover {
+/* .fa-instagram:hover {
   background: rgb(83, 86, 204);
   background: -webkit-linear-gradient(
     193deg,
@@ -292,7 +292,7 @@ p {
   );
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
-}
+} */
 
 /* 
     RESPONSIVE
