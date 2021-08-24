@@ -221,36 +221,36 @@ window.onload = function () {
         linkedinButton.style.color = "#222222";
     }
 
-    instagramButton.onmouseover = function() {
-        instagramButton.style.transition = "all 0.1s ease-in-out";
-        instagramButton.style.color = "#F35934";
-        instagramButton.style.cursor = "pointer";
-    }
+    // instagramButton.onmouseover = function() {
+    //     instagramButton.style.transition = "all 0.1s ease-in-out";
+    //     instagramButton.style.color = "#F35934";
+    //     instagramButton.style.cursor = "pointer";
+    // }
 
-    instagramButton.onmouseout = function() {
-        instagramButton.style.transition = "all 0.4s ease-in-out";
-        instagramButton.style.color = "#222222";
-    }
+    // instagramButton.onmouseout = function() {
+    //     instagramButton.style.transition = "all 0.4s ease-in-out";
+    //     instagramButton.style.color = "#222222";
+    // }
 
-    facebookButton.onmouseover = function() {
-        facebookButton.style.transition = "all 0.1s ease-in-out";
-        facebookButton.style.color = "#1877F2";
-        facebookButton.style.cursor = "pointer";
-    }
-    facebookButton.onmouseout = function() {
-        facebookButton.style.transition = "all 0.4s ease-in-out";
-        facebookButton.style.color = "#222222";
-    }
+    // facebookButton.onmouseover = function() {
+    //     facebookButton.style.transition = "all 0.1s ease-in-out";
+    //     facebookButton.style.color = "#1877F2";
+    //     facebookButton.style.cursor = "pointer";
+    // }
+    // facebookButton.onmouseout = function() {
+    //     facebookButton.style.transition = "all 0.4s ease-in-out";
+    //     facebookButton.style.color = "#222222";
+    // }
 
-    telegramButton.onmouseover = function() {
-        telegramButton.style.transition = "all 0.1s ease-in-out";
-        telegramButton.style.color = "#229FDA";
-        telegramButton.style.cursor = "pointer";
-    }
-    telegramButton.onmouseout = function() {
-        telegramButton.style.transition = "all 0.4s ease-in-out";
-        telegramButton.style.color = "#222222";
-    }
+    // telegramButton.onmouseover = function() {
+    //     telegramButton.style.transition = "all 0.1s ease-in-out";
+    //     telegramButton.style.color = "#229FDA";
+    //     telegramButton.style.cursor = "pointer";
+    // }
+    // telegramButton.onmouseout = function() {
+    //     telegramButton.style.transition = "all 0.4s ease-in-out";
+    //     telegramButton.style.color = "#222222";
+    // }
 
     mailButton.onmouseover = function() {
         mailButton.style.transition = "all 0.1s ease-in-out";
