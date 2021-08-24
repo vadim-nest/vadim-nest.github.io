@@ -371,7 +371,7 @@ p {
     display: inline-block;
   }
 }
-@media only screen and (min-width: 428px) and (max-width: 767px) {
+@media only screen and (min-width: 390px) and (max-width: 767px) {
   body {
     flex-direction: column;
     touch-action: pan-y;
