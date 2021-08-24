@@ -307,8 +307,18 @@ p {
   }
 }
 @media screen and (max-width: 599px) {
+  body {
+    flex-direction: column;
+  }
+  h1 {
+    font-size: 2em;
+  }
+  h3 {
+    padding-left: 0px;
+  }
   .wrapper {
-    /* margin-left: 20px; */
+    margin-left: 20px;
+    flex-direction: column;
   }
   #contact-float {
     bottom: 30px;
@@ -318,17 +328,111 @@ p {
   #logo .red {
     margin-left: 0%;
   }
+  #button-about,
+  #button-projects,
+  #button-contact {
+    margin: 0px 0px 15px 15px;
+  }
   #portrait {
     padding-top: 20px;
     padding-right: 80px;
     margin-left: 0px;
     text-align: left;
+    height: 200px;
   }
   #portrait img {
-    width: 250px;
+    width: 200px;
+  }
+  #about {
+    padding: 0px;
   }
   #about h1 {
     padding-top: 10px;
     margin-bottom: 0px;
+  }
+  #about p {
+    padding-left: 10px;
+  }
+  /* #projects img {
+    display: flex;
+  } */
+  #projects {
+    margin-left: 0px;
+  }
+  #projects h1 {
+    margin-left: 15vw;
+  }
+  #projects img {
+    width: 97vw;
+    margin-left: 1vw;
+  }
+
+  #stopwatch {
+    display: inline-block;
+  }
+}
+@media only screen and (min-width: 428px) and (max-width: 767px) {
+  body {
+    flex-direction: column;
+  }
+  h1 {
+    font-size: 2em;
+  }
+  h3 {
+    padding-left: 0px;
+  }
+  .wrapper {
+    margin-left: 20px;
+    flex-direction: column;
+  }
+  #contact-float {
+    bottom: 30px;
+    right: 20px;
+  }
+  #logo,
+  #logo .red {
+    margin-left: 0%;
+  }
+  #button-about,
+  #button-projects,
+  #button-contact {
+    margin: 0px 0px 15px 15px;
+  }
+  #portrait {
+    padding-top: 20px;
+    padding-right: 80px;
+    margin-left: 0px;
+    text-align: left;
+    height: 200px;
+  }
+  #portrait img {
+    width: 200px;
+  }
+  #about {
+    padding: 0px;
+  }
+  #about h1 {
+    padding-top: 10px;
+    margin-bottom: 0px;
+  }
+  #about p {
+    padding-left: 10px;
+  }
+  /* #projects img {
+  display: flex;
+} */
+  #projects {
+    margin-left: 0px;
+  }
+  #projects h1 {
+    margin-left: 15vw;
+  }
+  #projects img {
+    width: 97vw;
+    margin-left: 1vw;
+  }
+
+  #stopwatch {
+    display: inline-block;
   }
 }
