@@ -374,12 +374,22 @@ p {
 @media only screen and (min-width: 428px) and (max-width: 767px) {
   body {
     flex-direction: column;
+    touch-action: pan-y;
+    overflow-x: hidden;
   }
   h1 {
     font-size: 2em;
   }
   h3 {
     padding-left: 0px;
+  }
+  .header {
+    padding-left: 10px;
+  }
+  #button-about,
+  #button-projects,
+  #button-contact {
+    margin-left: 0px;
   }
   .wrapper {
     margin-left: 20px;
