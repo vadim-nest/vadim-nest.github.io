@@ -436,6 +436,9 @@ p {
   #projects p {
     padding-left: 10px;
   }
+  #projects h2 {
+    padding-left: 10px;
+  }
   .aboutProjects {
     padding-left: 0px;
     margin-left: 20px;
@@ -458,7 +461,6 @@ p {
   }
 
   #contact-float {
-    padding-left: 0px;
-    margin-left: 0px;
+    margin-left: 13.69px;
   }
 }
