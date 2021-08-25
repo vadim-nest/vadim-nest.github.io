@@ -428,6 +428,7 @@ p {
 } */
   #projects {
     margin-left: 0px;
+    margin-bottom: 60px;
   }
   #projects h1 {
     margin-left: 15vw;
@@ -461,6 +462,6 @@ p {
   }
 
   #contact-float {
-    margin-left: 13.69px;
+    margin-left: 6.85px;
   }
 }
