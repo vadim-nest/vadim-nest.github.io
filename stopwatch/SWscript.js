@@ -394,6 +394,14 @@ window.onload = function () {
     // STYLING
     /////////////////////////////////////////////////////////////////////////////
 
+    // window.onresize = function () {
+        // document.querySelectorAll(".wrapper").style.width = window.innerWidth;
+        // document.querySelector(".runningLap").style.width = window.innerWidth;
+        // document.querySelector(".laps").style.width = window.innerWidth;
+        // document.querySelector(".lap").style.width = window.innerWidth;
+        // console.log(window.innerWidth);
+    // }
+
     // Changing hours and tens appearance (color) on hover
     time.onmouseover = function() {
         hoursAndTens.forEach(function(element) {
