@@ -119,3 +119,11 @@ button {
 .runningLap {
   margin-bottom: 0;
 }
+@media only screen and (max-width: 767px) {
+  .wrapper,
+  .runningLap,
+  .laps,
+  .lap {
+    width: 400px;
+  }
+}
