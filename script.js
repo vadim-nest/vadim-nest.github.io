@@ -106,7 +106,9 @@ window.onload = function () {
     }
     buttonAbout.addEventListener('mouseup', e => {
         document.querySelector("#about").style.transition = "all 0.4s ease-in-out";
-        document.querySelector("body").scrollIntoView({behavior: "smooth", block: "start"});         
+        document.querySelector("body").scrollIntoView({behavior: "smooth", block: "start"});  
+        buttonAbout.style.transition = "all 1s ease-in-out";
+        buttonAbout.style.color = "#222222";
     });
 
 
@@ -122,7 +124,9 @@ window.onload = function () {
     buttonProjects.addEventListener('mouseup', e => {
         // document.querySelector("#projects").style.transition = "all 0.4s ease-in-out";
         document.querySelector("#projects").scrollIntoView({behavior: "smooth"});  
-        // document.querySelector("#projects h1").scrollTop -= 10;       
+        // document.querySelector("#projects h1").scrollTop -= 10;      
+        buttonProjects.style.transition = "all 1s ease-in-out";
+        buttonProjects.style.color = "#222222"; 
     });
 
 
@@ -137,7 +141,9 @@ window.onload = function () {
     }
     buttonContact.addEventListener('mouseup', e => {
         document.querySelector("#contact").style.transition = "all 0.4s ease-in-out";
-        document.querySelector("#contact").scrollIntoView({behavior: "smooth"});         
+        document.querySelector("#contact").scrollIntoView({behavior: "smooth"});  
+        buttonContact.style.transition = "all 1s ease-in-out";
+        buttonContact.style.color = "#222222";        
     });
 
     // Dark-theme Button in header
@@ -274,22 +280,32 @@ window.onload = function () {
 
 
     function responsiveDesign() {
-        if(window.innerWidth >= 600) {
+        if(window.innerWidth >= 767) {
             if(mobile) {
 
                 // Toggle Dark Theme button
                 buttonDarkTheme.classList.toggle("fas");
                 buttonDarkTheme.classList.toggle("fa-adjust");
                 buttonDarkTheme.classList.toggle("fa-2x");
+
+                let element = document.querySelector("#stopwatchPic");
+                element.parentNode.insertBefore(element, element.parentNode.firstChild);
+
+
             }
             mobile = false;
-        } else if (window.innerWidth < 600){
+        } else if (window.innerWidth < 767){
             if(!mobile) {
 
                 // Toggle Dark Theme button
                 buttonDarkTheme.classList.toggle("fas");
                 buttonDarkTheme.classList.toggle("fa-adjust");
                 buttonDarkTheme.classList.toggle("fa-2x");
+
+                // Swap Picture and text in Projects
+                // YOU NEED TO CHANGE IT TO querySelectorAll WHEN YOU HAVE MORE THAN 1 PROJECT
+                let element = document.querySelector(".aboutProjects");
+                element.parentNode.insertBefore(element, element.parentNode.firstChild);
             }
             mobile = true;
         }
