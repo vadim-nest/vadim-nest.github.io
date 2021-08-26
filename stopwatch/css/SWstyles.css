@@ -127,7 +127,7 @@ button {
     width: 350px;
   }
 
-  .disable-dbl-tap-zoom {
+  /* .disable-dbl-tap-zoom {
     touch-action: manipulation;
-  }
+  } */
 }

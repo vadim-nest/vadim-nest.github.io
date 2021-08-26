@@ -267,6 +267,17 @@ window.onload = function () {
         mailButton.style.transition = "all 0.4s ease-in-out";
         mailButton.style.color = "#222222";
     }
+
+    // Double-chek for the Logo colours
+    if ((top > namePosition)) {
+        logoV.style.color = "#ee0000";
+        logoG.style.color = "#222222";
+        toggleLogoChanged = true;
+    } else if ((top < namePosition)) {
+        logoV.style.color = "#fff";
+        logoG.style.color = "#fff";
+        toggleLogoChanged = false;
+    }
     
 
     ////////////////////////////////////////////
@@ -328,6 +339,11 @@ window.onload = function () {
                     contactButton.innerHTML = contactButton.innerHTML.substring(0, contactButton.innerHTML.length - 1);
                 }, i * 20);
             }
+            setTimeout(() => {
+                if(contactButton.innerHTML !== "") {
+                    contactButton.innerHTML = "";
+                }
+            }, 150);
 
             contactButton.classList.toggle("far");
             contactButton.classList.toggle("fa-envelope");
@@ -349,12 +365,18 @@ window.onload = function () {
                     contactButton.innerHTML = contactButton.innerHTML + innerText.charAt(i);
                 }, i * 40);
             }
+            setTimeout(() => {
+                if(contactButton.innerHTML !== "Contact") {
+                    contactButton.innerHTML = "Contact";
+                }
+            }, 300);
             contactButton.classList.toggle("far");
             contactButton.classList.toggle("fa-envelope");
             toggleProjectChanged = false;
 
         }
 
+        // Logo appearing when scroll past my name
         if ((top > namePosition) && !toggleLogoChanged) {
             setTimeout(() => {
                 logoV.style.transition = "all 0.2s ease-in-out";
@@ -369,6 +391,20 @@ window.onload = function () {
                 logoG.style.color = "#fff";
             }, 50);
             toggleLogoChanged = false;
+        }
+
+
+        // The floating button is white, when you reaching the bottom of the page (fix for mobile browsers scrolling)
+        if ((window.innerHeight + window.scrollY) >= document.body.offsetHeight) {
+            contactButton.style.color = "#ffffff";
+            contactButton.style.background = "#ffffff";
+            contactButton.style.border = "#ffffff";
+            contactButton.style.boxShadow = "0px 4px 7px rgba(255, 255, 255)";
+        } else {
+            contactButton.style.color = "#222222";
+            contactButton.style.background = "#ffdb4d";
+            contactButton.style.border = "#ffdb4d";
+            contactButton.style.boxShadow = "0px 4px 7px rgba(0, 0, 0, 0.1)";
         }
 
 
