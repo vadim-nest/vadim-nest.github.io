@@ -268,16 +268,7 @@ window.onload = function () {
         mailButton.style.color = "#222222";
     }
 
-    // Double-chek for the Logo colours
-    if ((top > namePosition)) {
-        logoV.style.color = "#ee0000";
-        logoG.style.color = "#222222";
-        toggleLogoChanged = true;
-    } else if ((top < namePosition)) {
-        logoV.style.color = "#fff";
-        logoG.style.color = "#fff";
-        toggleLogoChanged = false;
-    }
+    changingParts();
     
 
     ////////////////////////////////////////////
@@ -463,6 +454,73 @@ window.onload = function () {
         }
     }
 
+    // When a back button was pressed
+    if(!!window.performance && window.performance.navigation.type == 2) {
+        // window.location.reload();
+        changingParts();
+    }
+
+    // When page was reloaded
+    if (performance.navigation.type == performance.navigation.TYPE_RELOAD) {
+        changingParts();
+    }
+
+    // Function for double checking that the Logo and the Floating button are correct
+    function changingParts() {
+        let changeOnProjects = window.innerHeight / 2;
+        let namePosition = elementLocation(document.querySelector("#about h1")).top + document.querySelector("#about h1").offsetHeight - document.querySelector(".header").offsetHeight;
+
+        // Double-chek for the Logo colours
+        let top = window.scrollY;
+        if ((top > namePosition)) {
+            logoV.style.color = "#ee0000";
+            logoG.style.color = "#222222";
+            toggleLogoChanged = true;
+        } else if ((top < namePosition)) {
+            logoV.style.color = "#fff";
+            logoG.style.color = "#fff";
+            toggleLogoChanged = false;
+        }
+
+        // Double-check for floating button
+        if ((top > changeOnProjects)) {
+            if(contactButton.innerHTML !== "") {
+                contactButton.innerHTML = "";
+            }
+
+            if (contactButton.classList.contains("fa-envelope") === false) {
+                contactButton.classList.toggle("far");
+                contactButton.classList.toggle("fa-envelope");
+            }
+
+
+            contactButton.style.fontSize = "1.6em"; 
+            toggleProjectChanged = true;
+
+            contactButton.style.width = "57px";
+
+        } else if ((top < changeOnProjects)) {
+            // Changing contact button on scroll (to 'Contact')
+            contactButton.style.transition = "none";
+            contactButton.style.fontSize = "1.2em";
+            contactButton.style.width = "150px";
+
+            if(contactButton.innerHTML !== "Contact") {
+                contactButton.innerHTML = "Contact";
+            }
+
+            if (contactButton.classList.contains("fa-envelope") === true) {
+                contactButton.classList.toggle("far");
+                contactButton.classList.toggle("fa-envelope");
+            }
+            toggleProjectChanged = false;
+
+        }
+    } 
+
+
+
+
 
     
     // example use
@@ -476,7 +534,6 @@ window.onload = function () {
     // Bug fixes
     ///////////////////////////////////////////
     
-
 
 
 }
