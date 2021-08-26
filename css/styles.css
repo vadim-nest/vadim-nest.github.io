@@ -372,6 +372,9 @@ p {
   }
 }  */
 @media only screen and (max-width: 767px) {
+  .disable-dbl-tap-zoom {
+    touch-action: manipulation;
+  }
   body {
     flex-direction: column;
     touch-action: pan-y;

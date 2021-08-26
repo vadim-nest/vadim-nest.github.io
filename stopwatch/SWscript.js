@@ -144,76 +144,76 @@ window.onload = function () {
         } 
         // Reset button
         else if(!startClicked) {
-            
-            // Creating array with reset timer number with 2 digits format
-            let timeArrMain = [hours, minutes, seconds, tens];
-        
-            for(let i = 0; i < timeArrMain.length; i++) {
-                if(timeArrMain[i].toString().length === 1) {
-                    timeArrMain[i] = "0" + timeArrMain[i].toString();
-                }
-            }
-            
-            // Save the Main Time below (with laps)
+
             if(!mainTimerStartOrContinue) {
+
+                // Creating array with reset timer number with 2 digits format
+                let timeArrMain = [hours, minutes, seconds, tens];
+            
+                for(let i = 0; i < timeArrMain.length; i++) {
+                    if(timeArrMain[i].toString().length === 1) {
+                        timeArrMain[i] = "0" + timeArrMain[i].toString();
+                    }
+                }
+                
+                // Save the Main Time below (with laps)
                 const newStopWDiv = document.createElement("h3");
                 newStopWDiv.classList.add("stopwatch");
                 newStopWDiv.innerHTML = `${timeArrMain[0]}:${timeArrMain[1]}:${timeArrMain[2]}.${timeArrMain[3]}`;
                 document.querySelector(".stopWatch" + stopWatchCounter).prepend(newStopWDiv);
-            }
 
 
-            // Add line breaks between stopwatches
-            if(!mainTimerStartOrContinue) {
+                // Add line breaks between stopwatches
                 const newLineBreak = document.createElement("hr");
                 newLineBreak.classList.add("lineBreak");
                 document.querySelector(".stopWatch" + stopWatchCounter).prepend(newLineBreak);
+
+                // Save Best/Worst time for each Stopwatch
+                if (lapsCounter > 2) {
+                    document.querySelector(".stopWatch" + stopWatchCounter + " .lapNum" + bestLap).classList.add("bestLap");
+                    document.querySelector(".stopWatch" + stopWatchCounter + " .lapNum" + worstLap).classList.add("worstLap");
+                }
+
+                // Reset Main Timer
+                clearInterval(Interval);
+                hours = "00";
+                minutes = "00";
+                seconds = "00";
+                tens = "00";
+
+                appendMinutes.innerHTML = minutes;
+                appendTens.innerHTML = tens;
+                appendSeconds.innerHTML = seconds;
+                appendHours.innerHTML = hours;
+
+                clearInterval(flashSecInterval);
+                secColor.style.transition = "all 0.4s ease-in-out";
+                secColor.style.color = "#222222";
+
+                // Reset Laps Timer
+                clearInterval(IntervalLaps);
+                hoursLaps = "00";
+                minutesLaps = "00";
+                tensLaps = "00";
+                secondsLaps = "00";
+
+                appendMinutesLaps.innerHTML = minutesLaps;
+                appendTensLaps.innerHTML = tensLaps;
+                appendSecondsLaps.innerHTML = secondsLaps;
+                appendHoursLaps.innerHTML = hoursLaps;
+
+                lapsCounter = 1;
+                appendLapsCounter.innerHTML = lapsCounter;
+
+                bestWorstLapArr = [];
+
+                mainTimerStartOrContinue = true;
+                stopWatchCounter++;
+                lapColorOnStart();
+                stopwatchStyling();
+                lapsStyling();    
+            
             }
-
-            // Save Best/Worst time for each Stopwatch
-            if (lapsCounter > 2) {
-                document.querySelector(".stopWatch" + stopWatchCounter + " .lapNum" + bestLap).classList.add("bestLap");
-                document.querySelector(".stopWatch" + stopWatchCounter + " .lapNum" + worstLap).classList.add("worstLap");
-            }
-
-            // Reset Main Timer
-            clearInterval(Interval);
-            hours = "00";
-            minutes = "00";
-            seconds = "00";
-            tens = "00";
-
-            appendMinutes.innerHTML = minutes;
-            appendTens.innerHTML = tens;
-            appendSeconds.innerHTML = seconds;
-            appendHours.innerHTML = hours;
-
-            clearInterval(flashSecInterval);
-            secColor.style.transition = "all 0.4s ease-in-out";
-            secColor.style.color = "#222222";
-
-            // Reset Laps Timer
-            clearInterval(IntervalLaps);
-            hoursLaps = "00";
-            minutesLaps = "00";
-            tensLaps = "00";
-            secondsLaps = "00";
-
-            appendMinutesLaps.innerHTML = minutesLaps;
-            appendTensLaps.innerHTML = tensLaps;
-            appendSecondsLaps.innerHTML = secondsLaps;
-            appendHoursLaps.innerHTML = hoursLaps;
-
-            lapsCounter = 1;
-            appendLapsCounter.innerHTML = lapsCounter;
-
-            bestWorstLapArr = [];
-
-            mainTimerStartOrContinue = true;
-            stopWatchCounter++;
-            lapColorOnStart();
-            stopwatchStyling();
-            lapsStyling();             
         }
     }
 
@@ -508,24 +508,27 @@ window.onload = function () {
     // Button Lap/Reset on mousedown/mouseup
     buttonLapReset.addEventListener('mousedown', e => {
         if(!mainTimerStartOrContinue) {
-            if(!startClicked) {     // Start button
+            if(!startClicked) {     // Lap button
                 buttonLapReset.style.background = "#91BC24";
                 buttonLapReset.style.border = "solid 3px #91BC24";
             }
-            if(startClicked) {      // Stop button
+            if(startClicked) {      // Reset button
                 buttonLapReset.style.background = "#F5F5F5";
                 buttonLapReset.style.border = "solid 3px #91BC24";
             }
         }
+        // else {
+
+        // }
     });
 
     buttonLapReset.addEventListener('mouseup', e => {
         if(!mainTimerStartOrContinue) {
-            if(!startClicked) {     // Start button
+            if(!startClicked) {     // Lap button
                 buttonLapReset.style.background = "#91BC24";
                 buttonLapReset.style.border = "solid 3px #FFDB4D";
             }
-            if(startClicked) {      // Stop button
+            if(startClicked) {      // Reset button
                 buttonLapReset.style.background = "#ffffff";
                 buttonLapReset.style.border = "solid 3px #BEE265";
             }

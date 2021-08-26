@@ -126,4 +126,8 @@ button {
   .lap {
     width: 350px;
   }
+
+  .disable-dbl-tap-zoom {
+    touch-action: manipulation;
+  }
 }
