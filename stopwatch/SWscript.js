@@ -44,6 +44,7 @@ window.onload = function () {
     // let previousLapHover;
     let stopWatchCounter = 1;
     let lapsColorToggle = false;
+    const logo = document.querySelector("#logo");
     
 
     // After you finish with this, you'll need to change the name of the Start button to Start-Stop button (in your code)
@@ -401,6 +402,10 @@ window.onload = function () {
         // document.querySelector(".lap").style.width = window.innerWidth;
         // console.log(window.innerWidth);
     // }
+
+    logo.onclick = function() {
+        
+    }
 
     // Changing hours and tens appearance (color) on hover
     time.onmouseover = function() {
