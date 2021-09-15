@@ -104,6 +104,10 @@ p {
   flex-wrap: wrap;
   height: 75vh;
 }
+.break {
+  flex-basis: 100%;
+  height: 0;
+}
 #portrait {
   flex: 1;
   padding-right: 40px;
@@ -132,6 +136,24 @@ p {
 #about p {
   padding-left: 27.34px;
 }
+#scroll {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  color: #fff;
+  width: 80px;
+  height: 130px;
+  z-index: 2;
+}
+
+#scroll .arrow1 {
+  margin-top: 14vh;
+  /* opacity: 0.3; */
+}
+#scroll .arrow2 {
+  /* opacity: 0.6; */
+}
+
 /* 
     FLOATING BUTTON
   */
@@ -158,6 +180,7 @@ p {
   /* margin: 30px auto; */
   flex-wrap: wrap;
   margin-left: 15vw;
+  z-index: 1;
 }
 #stopwatch {
   display: flex;
@@ -241,7 +264,7 @@ p {
   border-top: solid 1.8px #222222;
 }
 .mail-link {
-  text-decoration: none;
+  text-decoration-color: #ee0000;
   color: #222222;
   font-size: 18px;
 }

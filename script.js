@@ -44,6 +44,10 @@ window.onload = function () {
     const telegramButton = document.querySelector(".fa-telegram-plane");
     const mailButton = document.querySelector(".mail-icon");
     const buttonOpenProject = document.querySelectorAll(".button-open-project");
+    const arrow1 = document.querySelector(".arrow1");
+    const arrow2 = document.querySelector(".arrow2");
+    const arrows = document.querySelector("#scroll");
+
     
 
     ////////////////////////////////////////////
@@ -268,6 +272,42 @@ window.onload = function () {
         mailButton.style.color = "#222222";
     }
 
+
+    // Arrows appear in the bottom
+    function arrowsAppear() {
+        setTimeout(() => {
+            arrow1.style.transition = "all 0.6s ease-in-out";
+            arrow1.style.color = "rgba(255, 204, 0, 0.2)";
+        }, 2000);
+        setTimeout(() => {
+            arrow2.style.transition = "all 0.6s ease-in-out";
+            arrow2.style.color = "rgba(255, 204, 0, 0.4)";
+        }, 2700);
+
+    };
+
+    arrows.onmouseover = function() {
+        arrows.style.cursor = "pointer";
+        arrow1.style.transition = "all 0.2s ease-in-out";
+        arrow2.style.transition = "all 0.2s ease-in-out";
+        arrow1.style.color = "rgba(255, 204, 0, 0.8)";
+        arrow2.style.color = "rgba(255, 204, 0, 0.8)";
+        arrow1.style.marginTop = "15vh";
+
+    }
+    arrows.onmouseout = function() {
+        arrow1.style.transition = "all 0.4s ease-in-out";
+        arrow2.style.transition = "all 0.4s ease-in-out";
+        arrow1.style.color = "rgba(255, 204, 0, 0.2)";
+        arrow2.style.color = "rgba(255, 204, 0, 0.4)";
+        arrow1.style.marginTop = "14vh";
+
+    }
+    arrows.addEventListener('mouseup', e => {
+        document.querySelector("#projects").scrollIntoView({behavior: "smooth"});  
+    });
+    arrowsAppear();
+
     changingParts();
     
 
@@ -318,6 +358,7 @@ window.onload = function () {
     // Fix for back button in ios safari (the logo and the floating button weren't updating)
     window.onpageshow = function(event) {
 		if (event.persisted) {
+            event.preventDefault();
 			window.location.reload(true);
 		}
 	};
