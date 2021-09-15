@@ -442,11 +442,13 @@ p {
   }
   .aboutProjects {
     padding-left: 0px;
+    padding-top: 0px;
     margin-left: 20px;
     margin-bottom: 30px;
   }
   .button-open-project {
     margin-left: 10px;
+    margin-top: 20px;
   }
   #projects img {
     width: 97vw;
@@ -462,6 +464,6 @@ p {
   }
 
   #contact-float {
-    margin-left: 6.85px;
+    /* margin-left: 6.85px; */
   }
 }
