@@ -318,7 +318,7 @@ window.onload = function () {
     // Fix for back button in ios safari (the logo and the floating button weren't updating)
     window.onpageshow = function(event) {
 		if (event.persisted) {
-			window.location.reload();
+			window.location.reload(true);
 		}
 	};
 
