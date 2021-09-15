@@ -29,6 +29,7 @@ body {
   /* border-bottom: solid 1px #e7e7e7; */
   box-sizing: border-box;
   z-index: 6;
+  width: 40px;
 }
 #logo .red {
   color: #ee0000;
@@ -148,6 +149,13 @@ button {
   .laps,
   .lap {
     width: 350px;
+  }
+  #logo {
+    margin-left: 0%;
+    padding-left: 15px;
+  }
+  h1 {
+    padding-top: 60px;
   }
 
   /* .disable-dbl-tap-zoom {
