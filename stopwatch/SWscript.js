@@ -403,8 +403,11 @@ window.onload = function () {
         // console.log(window.innerWidth);
     // }
 
+    logo.onmouseover = function() {
+        logo.style.cursor = "pointer";
+    }
     logo.onclick = function() {
-        
+        window.location = '/';
     }
 
     // Changing hours and tens appearance (color) on hover
