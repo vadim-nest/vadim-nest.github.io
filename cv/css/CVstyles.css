@@ -1,0 +1,15 @@
+body {
+  display: flex;
+  width: 1000px;
+  margin: 0 auto;
+}
+.break {
+  /* flex-basis: 100%; */
+  height: 0;
+}
+#left {
+  flex: 2;
+}
+#right {
+  flex: 8;
+}
