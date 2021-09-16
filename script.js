@@ -277,12 +277,12 @@ window.onload = function () {
     function arrowsAppear() {
         setTimeout(() => {
             arrow1.style.transition = "all 0.6s ease-in-out";
-            arrow1.style.color = "rgba(255, 204, 0, 0.2)";
-        }, 2000);
+            arrow1.style.color = "rgba(255, 204, 0, 0.3)";
+        }, 1000);
         setTimeout(() => {
             arrow2.style.transition = "all 0.6s ease-in-out";
-            arrow2.style.color = "rgba(255, 204, 0, 0.4)";
-        }, 2700);
+            arrow2.style.color = "rgba(255, 204, 0, 0.6)";
+        }, 1700);
 
     };
 
@@ -298,13 +298,18 @@ window.onload = function () {
     arrows.onmouseout = function() {
         arrow1.style.transition = "all 0.4s ease-in-out";
         arrow2.style.transition = "all 0.4s ease-in-out";
-        arrow1.style.color = "rgba(255, 204, 0, 0.2)";
-        arrow2.style.color = "rgba(255, 204, 0, 0.4)";
+        arrow1.style.color = "rgba(255, 204, 0, 0.3)";
+        arrow2.style.color = "rgba(255, 204, 0, 0.6)";
         arrow1.style.marginTop = "14vh";
 
     }
     arrows.addEventListener('mouseup', e => {
         document.querySelector("#projects").scrollIntoView({behavior: "smooth"});  
+        arrow1.style.transition = "all 0.4s ease-in-out";
+        arrow2.style.transition = "all 0.4s ease-in-out";
+        arrow1.style.color = "rgba(255, 204, 0, 0.8)";
+        arrow2.style.color = "rgba(255, 204, 0, 0.8)";
+        arrow1.style.marginTop = "15vh";
     });
     arrowsAppear();
 

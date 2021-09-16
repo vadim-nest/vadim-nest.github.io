@@ -412,6 +412,7 @@ p {
   .wrapper {
     margin-left: 20px;
     flex-direction: column;
+    flex-wrap: nowrap;
   }
   #contact-float {
     bottom: 30px;
@@ -445,6 +446,13 @@ p {
   }
   #about p {
     padding-left: 10px;
+  }
+  #scroll {
+    margin: 0px;
+    height: 150px;
+  }
+  #scroll .arrow1 {
+    margin-top: 1vh;
   }
   /* #projects img {
   display: flex;
