@@ -452,7 +452,8 @@ p {
     height: 150px;
   }
   #scroll .arrow1 {
-    margin-top: 1vh;
+    margin-top: 20px;
+    padding-top: 0px;
   }
   /* #projects img {
   display: flex;

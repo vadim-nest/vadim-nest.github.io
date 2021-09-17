@@ -292,7 +292,7 @@ window.onload = function () {
         arrow2.style.transition = "all 0.2s ease-in-out";
         arrow1.style.color = "rgba(255, 204, 0, 0.8)";
         arrow2.style.color = "rgba(255, 204, 0, 0.8)";
-        arrow1.style.marginTop = "15vh";
+        arrow1.style.paddingTop = "10px";
 
     }
     arrows.onmouseout = function() {
@@ -300,7 +300,7 @@ window.onload = function () {
         arrow2.style.transition = "all 0.4s ease-in-out";
         arrow1.style.color = "rgba(255, 204, 0, 0.3)";
         arrow2.style.color = "rgba(255, 204, 0, 0.6)";
-        arrow1.style.marginTop = "14vh";
+        arrow1.style.paddingTop = "0px";
 
     }
     arrows.addEventListener('mouseup', e => {
@@ -309,7 +309,7 @@ window.onload = function () {
         arrow2.style.transition = "all 0.4s ease-in-out";
         arrow1.style.color = "rgba(255, 204, 0, 0.8)";
         arrow2.style.color = "rgba(255, 204, 0, 0.8)";
-        arrow1.style.marginTop = "15vh";
+        arrow1.style.paddingTop = "0px";
     });
     arrowsAppear();
 
