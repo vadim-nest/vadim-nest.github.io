@@ -86,6 +86,24 @@ img {
   width: 40px;
   margin: 0 auto;
 }
+#leftText button {
+  display: inline-block;
+  text-align: center;
+  left: 50%;
+}
+#cv-buttons {
+  height: 30px;
+  position: relative;
+  border: 3px solid green;
+}
+#center {
+  margin: 0;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+}
 #right {
   width: 750;
   flex: 9;
@@ -140,16 +158,17 @@ img {
   width: 2px;
   content: "";
   position: absolute;
-  top: 0px;
+  top: 20px;
   bottom: -15px;
   left: -23px;
-}
-#education ul::before {
-  top: 20px;
 }
 #education ul::marker {
   color: #1c473b;
   font-size: 28px;
+}
+/* #education ul::before, */
+#education ul {
+  padding-top: 0px;
 }
 #education p {
   margin-top: 5px;
@@ -165,4 +184,10 @@ img {
 }
 .description {
   list-style-type: none;
+}
+
+@media only screen and (max-width: 767px) {
+  #education ul::before {
+    bottom: -10px;
+  }
 }
