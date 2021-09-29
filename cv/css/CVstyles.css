@@ -55,11 +55,15 @@ i {
   text-align: center;
 }
 #leftText h2 {
-  margin-bottom: 45px;
+  /* margin-bottom: 45px; */
 }
-#leftText h2:first-of-type {
+/* #leftText h2:first-of-type {
   margin-bottom: 0px;
   font-size: 1.1em;
+} */
+#downloadH2 {
+  margin-top: 40px;
+  margin-bottom: 10px;
 }
 #leftText h3 {
   margin-top: 45px;
@@ -89,20 +93,38 @@ img {
 #leftText button {
   display: inline-block;
   text-align: center;
-  left: 50%;
+  left: 50px;
+  color: beige;
+  background-color: #ff312e;
+  width: 100px;
+  height: 30px;
+  font-family: "Lato", sans-serif;
+  font-weight: bold;
+  font-size: 0.9em;
+  border: 3px solid transparent;
+  border-radius: 15px;
 }
+/* Colours for buttons */
+/* #db3a34 !
+#de6b48
+#f64740
+#ff312e !!! 
+#FC440F !! */
+
 #cv-buttons {
   height: 30px;
   position: relative;
-  border: 3px solid green;
+  left: 50px;
+  /* border: 3px solid green; */
 }
 #center {
-  margin: 0;
+  /* margin: 0;
   position: absolute;
-  top: 50%;
-  left: 50%;
-  -ms-transform: translate(-50%, -50%);
-  transform: translate(-50%, -50%);
+  text-align: center;
+  /* top: 50%; */
+  /* left: auto; */
+  /* -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%); */
 }
 #right {
   width: 750;
@@ -129,6 +151,7 @@ img {
   font-weight: bold;
   margin-top: 60px;
   margin-bottom: 5px;
+  font-size: 1.3em;
 }
 #rightText h2:first-of-type {
   margin-top: 20px;
