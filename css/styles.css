@@ -82,6 +82,7 @@ p {
   border: none;
   border-bottom: 3px solid transparent;
   flex: 1;
+  color: #222222;
 }
 /* #button-about {
     border-bottom: 3px solid #ee0000;
