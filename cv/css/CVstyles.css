@@ -62,7 +62,7 @@ i {
   font-size: 1.1em;
 } */
 #downloadH2 {
-  margin-top: 40px;
+  margin-top: 30px;
   margin-bottom: 10px;
 }
 #leftText h3 {
@@ -101,8 +101,9 @@ img {
   font-family: "Lato", sans-serif;
   font-weight: bold;
   font-size: 0.9em;
-  border: 3px solid transparent;
+  border: 2px solid #ff312e;
   border-radius: 15px;
+  margin-right: 5px;
 }
 /* Colours for buttons */
 /* #db3a34 !
