@@ -9,10 +9,19 @@ window.onload = function() {
         pdfButton.style.cursor = "pointer";
     }
     pdfButton.onmouseout = function() {
-        pdfButton.style.transition = "all 0.4s ease-in-out";
-        pdfButton.style.border = "solid 2px #ff312e"
+        pdfButton.style.transition = "all 0.2s ease-in-out";
+        pdfButton.style.border = "solid 2px #ff312e";
+        pdfButton.style.background = "#ff312e";
 
     }
+
+    pdfButton.addEventListener('mousedown', e => {
+        pdfButton.style.background = "#FF5F5C";
+    });
+
+    pdfButton.addEventListener('mouseup', e => {
+        pdfButton.style.background = "#ff312e";
+    });
 
     wordButton.onmouseover = function() {
         wordButton.style.transition = "all 0.1s ease-in-out";
@@ -20,7 +29,17 @@ window.onload = function() {
         wordButton.style.cursor = "pointer";
     }
     wordButton.onmouseout = function() {
-        wordButton.style.transition = "all 0.4s ease-in-out";
-        wordButton.style.border = "solid 2px #ff312e"
+        wordButton.style.transition = "all 0.2s ease-in-out";
+        wordButton.style.border = "solid 2px #ff312e";
+        wordButton.style.background = "#ff312e";
+
     }
+
+    wordButton.addEventListener('mousedown', e => {
+        wordButton.style.background = "#FF5F5C";
+    });
+
+    wordButton.addEventListener('mouseup', e => {
+        wordButton.style.background = "#ff312e";
+    });
 }
