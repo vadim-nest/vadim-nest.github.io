@@ -43,7 +43,7 @@ window.onload = function () {
     const facebookButton = document.querySelector(".fa-facebook");
     const telegramButton = document.querySelector(".fa-telegram-plane");
     const mailButton = document.querySelector(".mail-icon");
-    const buttonOpenProject = document.querySelectorAll(".button-open-project");
+    const buttonOpen = document.querySelectorAll(".button-open");
     const arrow1 = document.querySelector(".arrow1");
     const arrow2 = document.querySelector(".arrow2");
     const arrows = document.querySelector("#scroll");
@@ -174,7 +174,7 @@ window.onload = function () {
     }
 
     // Open project buttons on hover
-    buttonOpenProject.forEach(element => {
+    buttonOpen.forEach(element => {
         element.onmouseover = function() { 
             element.style.transition = "all 0.1s ease-in-out";
             element.style.color = "#EE0000";
@@ -182,6 +182,7 @@ window.onload = function () {
         element.onmouseout = function() {
             element.style.transition = "all 0.4s ease-in-out";
             element.style.color = "#222222";
+            element.style.border = "solid 3px #FFCC00";
         }
 
         // Open project buttons on click
