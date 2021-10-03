@@ -137,6 +137,22 @@ p {
 #about p {
   padding-left: 27.34px;
 }
+.button-open {
+  margin-top: 40px;
+  width: 130px;
+  height: 47px;
+  background-color: #ffffff;
+  color: #222222;
+  border-radius: 50px;
+  border: solid 3px #ffcc00;
+  font-size: 1.1em;
+  cursor: pointer;
+  box-shadow: 0px 4px 7px rgba(0, 0, 0, 0.1);
+}
+#button-open-cv {
+  margin-top: 15px;
+  margin-left: 27.34px;
+}
 #scroll {
   display: block;
   margin-left: auto;
@@ -218,18 +234,6 @@ p {
 .aboutProjects {
   flex: 6;
   padding: 20px 80px;
-}
-.button-open-project {
-  margin-top: 40px;
-  width: 150px;
-  height: 53px;
-  background-color: #ffffff;
-  color: #222222;
-  border-radius: 50px;
-  border: solid 3px #ffcc00;
-  font-size: 1.2em;
-  cursor: pointer;
-  box-shadow: 0px 4px 7px rgba(0, 0, 0, 0.1);
 }
 .button-open-project:active {
   box-shadow: none;
