@@ -211,7 +211,38 @@ img {
 }
 
 @media only screen and (max-width: 767px) {
+  body {
+    flex-direction: column;
+    touch-action: pan-y;
+    overflow-x: hidden;
+  }
   #education ul::before {
     bottom: -10px;
   }
+
+  #leftText {
+    width: 100%;
+    margin-left: 0px;
+  }
+  #img-center {
+    text-align: center;
+  }
+  img {
+    margin-left: auto;
+  }
+  #leftText h3,
+  #leftText ul,
+  #leftText p,
+  i,
+  .mail-link {
+    margin-left: 20px;
+    margin-right: 20px;
+  }
+  #center {
+  }
+
+  /* #leftText h1,
+  #leftText h2 {
+    margin-left: 0px;
+  } */
 }
