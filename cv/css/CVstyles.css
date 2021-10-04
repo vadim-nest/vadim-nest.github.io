@@ -103,7 +103,7 @@ img {
   font-size: 0.9em;
   border: 2px solid #ff312e;
   border-radius: 15px;
-  margin-right: 5px;
+  margin-right: 5px; /* if you are changing this property, don't forget to chenge it in JS as well (const buttonsSize) */
 }
 /* Colours for buttons */
 /* #db3a34 !
@@ -216,6 +216,13 @@ img {
     touch-action: pan-y;
     overflow-x: hidden;
   }
+  p,
+  ul {
+    font-size: 1.15em;
+  }
+  h3 {
+    font-size: 1.4em;
+  }
   #education ul::before {
     bottom: -10px;
   }
@@ -223,6 +230,7 @@ img {
   #leftText {
     width: 100%;
     margin-left: 0px;
+    margin-bottom: 100px;
   }
   #img-center {
     text-align: center;
@@ -235,10 +243,21 @@ img {
   #leftText p,
   i,
   .mail-link {
-    margin-left: 20px;
+    margin-left: 30px;
     margin-right: 20px;
   }
-  #center {
+  #cv-buttons {
+    left: 0px;
+    /* right: 10vw; */
+  }
+  #leftText button {
+    width: 120px;
+    height: 35px;
+    border-radius: 50px;
+  }
+  #rightText {
+    margin-top: 30px;
+    margin-left: 30px;
   }
 
   /* #leftText h1,
