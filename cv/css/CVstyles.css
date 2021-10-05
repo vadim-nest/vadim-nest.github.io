@@ -217,7 +217,9 @@ img {
     overflow-x: hidden;
   }
   p,
-  ul {
+  ul,
+  .mail-link,
+  i {
     font-size: 1.15em;
   }
   h3 {
@@ -230,7 +232,7 @@ img {
   #leftText {
     width: 100%;
     margin-left: 0px;
-    margin-bottom: 100px;
+    margin-bottom: 80px;
   }
   #img-center {
     text-align: center;
@@ -256,7 +258,7 @@ img {
     border-radius: 50px;
   }
   #rightText {
-    margin-top: 30px;
+    margin-top: 80px;
     margin-left: 30px;
   }
 
