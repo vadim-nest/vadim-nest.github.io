@@ -51,13 +51,17 @@ window.onload = function() {
     buttonsCenterResponsive();
 
     function buttonsCenterResponsive() {
-        cvButtons.style.left = (window.innerWidth - buttonsSize) / 2 + "px";
+        if(window.innerWidth <= 767) {
+            cvButtons.style.left = (window.innerWidth - buttonsSize) / 2 + "px";
+        } else {
+            cvButtons.style.left = "50px";
+        }
     
     };
 
     // You need to finish here (put buttons in place when not mobile screen)
     window.onresize = function(event) { 
-        buttonsCenterResponsive
+        buttonsCenterResponsive();
     };
 
 }

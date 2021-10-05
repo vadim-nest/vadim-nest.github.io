@@ -409,6 +409,7 @@ p {
     font-size: 2em;
   }
   h3 {
+    margin-top: 5px;
     padding-left: 0px;
   }
   .header {
@@ -448,9 +449,14 @@ p {
   #about h1 {
     padding-top: 10px;
     margin-bottom: 0px;
+    margin-top: 5px;
   }
   #about p {
     padding-left: 10px;
+    margin-top: 10px;
+  }
+  #button-open-cv {
+    margin-top: 5px;
   }
   #scroll {
     margin: 0px;
@@ -483,7 +489,7 @@ p {
     margin-left: 20px;
     margin-bottom: 30px;
   }
-  .button-open-project {
+  .button-open {
     margin-left: 10px;
     margin-top: 20px;
   }
