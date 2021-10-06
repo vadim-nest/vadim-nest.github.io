@@ -26,11 +26,11 @@ window.onload = function () {
     let namePosition = elementLocation(document.querySelector("#about h1")).top + document.querySelector("#about h1").offsetHeight - document.querySelector(".header").offsetHeight;
     const logoV = document.querySelector("#logo .red");
     const logoG = document.querySelector("#logo");
-    const innerText = contactButton.innerHTML;
+    const innerText = document.querySelector("#float-text").innerHTML;
     let innerTextLength = innerText.length;
     let contactPageStart = elementLocation(document.querySelector("#contact")).top;
-    let contactButtonRight = (window.innerWidth - document.querySelector("#contact-float").offsetLeft - document.querySelector("#contact-float").offsetWidth);
-    let buttonHidden = false;
+    // let contactButtonRight = (window.innerWidth - document.querySelector("#contact-float").offsetLeft - document.querySelector("#contact-float").offsetWidth);
+    // let buttonHidden = false;
     let vh = window.innerHeight * 0.01;
     let changeOnContact = contactPageStart - (45 * vh);
     const buttonDarkTheme = document.querySelector("#dark-theme");
@@ -39,9 +39,9 @@ window.onload = function () {
     const mailLink = document.querySelector(".mail-link");
     const githubButton = document.querySelector(".fa-github");
     const linkedinButton = document.querySelector(".fa-linkedin-in");
-    const instagramButton = document.querySelector(".fa-instagram");
-    const facebookButton = document.querySelector(".fa-facebook");
-    const telegramButton = document.querySelector(".fa-telegram-plane");
+    // const instagramButton = document.querySelector(".fa-instagram");
+    // const facebookButton = document.querySelector(".fa-facebook");
+    // const telegramButton = document.querySelector(".fa-telegram-plane");
     const mailButton = document.querySelector(".mail-icon");
     const buttonOpen = document.querySelectorAll(".button-open");
     const arrow1 = document.querySelector(".arrow1");
@@ -547,7 +547,7 @@ window.onload = function () {
 
 
             contactButton.style.fontSize = "1.6em"; 
-            contactButton.style.textAllign = "center";
+            innerText.style.textAllign = "center";
             toggleProjectChanged = true;
 
             contactButton.style.width = "57px";
