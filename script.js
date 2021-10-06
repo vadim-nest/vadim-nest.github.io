@@ -547,8 +547,8 @@ window.onload = function () {
 
 
             contactButton.style.fontSize = "1.6em"; 
-            innerText.style.textAllign = "center";
-            innerText.style.left = "50%";
+            // innerText.style.textAllign = "center";
+            // innerText.style.left = "100px";
             toggleProjectChanged = true;
 
             contactButton.style.width = "57px";

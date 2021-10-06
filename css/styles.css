@@ -419,6 +419,7 @@ p {
     margin-left: 20px;
     flex-direction: column;
     flex-wrap: nowrap;
+    margin-bottom: 80px;
   }
   #contact-float {
     bottom: 30px;
