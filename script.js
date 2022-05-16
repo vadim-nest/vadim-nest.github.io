@@ -21,28 +21,26 @@ window.onload = function () {
     let toggleLogoChanged = false;
     let toggleContactChanged = false;
     const buttonAbout = document.querySelector("#button-about");
+    const $buttonAbout = $("#button-about");
     const buttonProjects = document.querySelector("#button-projects");
+    const $buttonProjects = $("#button-projects");
     const buttonContact = document.querySelector("#button-contact");
+    const $buttonContact = $("#button-contact");
     let namePosition = elementLocation(document.querySelector("#about h1")).top + document.querySelector("#about h1").offsetHeight - document.querySelector(".header").offsetHeight;
     const logoV = document.querySelector("#logo .red");
     const logoG = document.querySelector("#logo");
     const innerText = document.querySelector("#float-text").innerHTML;
     let innerTextLength = innerText.length;
     let contactPageStart = elementLocation(document.querySelector("#contact")).top;
-    // let contactButtonRight = (window.innerWidth - document.querySelector("#contact-float").offsetLeft - document.querySelector("#contact-float").offsetWidth);
-    // let buttonHidden = false;
     let vh = window.innerHeight * 0.01;
     let changeOnContact = contactPageStart - (45 * vh);
     const buttonDarkTheme = document.querySelector("#dark-theme");
     const header = document.querySelector(".header");
     let mouseOverDarkMode = false;
-    const mailLink = document.querySelector(".mail-link");
-    const githubButton = document.querySelector(".fa-github");
-    const linkedinButton = document.querySelector(".fa-linkedin-in");
-    // const instagramButton = document.querySelector(".fa-instagram");
-    // const facebookButton = document.querySelector(".fa-facebook");
-    // const telegramButton = document.querySelector(".fa-telegram-plane");
-    const mailButton = document.querySelector(".mail-icon");
+    const $mailLink = $(".mail-link");
+    const $githubButton = $(".fa-github");
+    const $linkedinButton = $(".fa-linkedin-in");
+    const $mailButton = $(".mail-icon");
     const buttonOpen = document.querySelectorAll(".button-open");
     const arrow1 = document.querySelector(".arrow1");
     const arrow2 = document.querySelector(".arrow2");
@@ -65,7 +63,7 @@ window.onload = function () {
     changeBorderHeader();
 
 
-    // Contact button styling
+    // Contact button styling (the floating button)
     contactButton.style.border = "solid 3px #FFDB4D";
 
     contactButton.onmouseover = function() { 
@@ -99,79 +97,56 @@ window.onload = function () {
 
 
     // Buttons in header Styling / Event Listeners
-    buttonAbout.onmouseover = function() {
-        buttonAbout.style.transition = "all 0.1s ease-in-out";
-        buttonAbout.style.color = "#ee0000";
-        buttonAbout.style.cursor = "pointer";
-    }
-    buttonAbout.onmouseout = function() {
-        buttonAbout.style.transition = "all 0.4s ease-in-out";
-        buttonAbout.style.color = "#222222";
-    }
-    buttonAbout.addEventListener('mouseup', e => {
-        document.querySelector("#about").style.transition = "all 0.4s ease-in-out";
-        document.querySelector("body").scrollIntoView({behavior: "smooth", block: "start"});  
-        buttonAbout.style.transition = "all 1s ease-in-out";
-        buttonAbout.style.color = "#222222";
-    });
+    const headingButtonsClickAndHover = function(button, selector) {
+        button.hover(
+            function () {
+                $(this).css("transition", "all 0.1s ease-in-out")
+                    .css("color", "#ee0000")
+                    .css("cursor", "pointer");
+            },
+            // off hover
+            function () {
+                $(this).css("transition", "all 0.4s ease-in-out")
+                    .css("color", "#222222");
+            }
+        );
 
+        button.click(
+            function () {
+                document.querySelector(selector).scrollIntoView({behavior: "smooth", block: "start"});
+                button.css("transition", "all 1s ease-in-out")
+                    .css("color", "#222222")
+            }
+        )
+    }
 
-    buttonProjects.onmouseover = function() {
-        buttonProjects.style.transition = "all 0.1s ease-in-out";
-        buttonProjects.style.color = "#ee0000";
-        buttonProjects.style.cursor = "pointer";
-    }
-    buttonProjects.onmouseout = function() {
-        buttonProjects.style.transition = "all 0.4s ease-in-out";
-        buttonProjects.style.color = "#222222";
-    }
-    buttonProjects.addEventListener('mouseup', e => {
-        // document.querySelector("#projects").style.transition = "all 0.4s ease-in-out";
-        document.querySelector("#projects").scrollIntoView({behavior: "smooth"});  
-        // document.querySelector("#projects h1").scrollTop -= 10;      
-        buttonProjects.style.transition = "all 1s ease-in-out";
-        buttonProjects.style.color = "#222222"; 
-    });
+    headingButtonsClickAndHover($buttonAbout, "body");
+    headingButtonsClickAndHover($buttonProjects, "#projects");
+    headingButtonsClickAndHover($buttonContact, "#contact");
 
-
-    buttonContact.onmouseover = function() {
-        buttonContact.style.transition = "all 0.1s ease-in-out";
-        buttonContact.style.color = "#ee0000";
-        buttonContact.style.cursor = "pointer";
-    }
-    buttonContact.onmouseout = function() {
-        buttonContact.style.transition = "all 0.4s ease-in-out";
-        buttonContact.style.color = "#222222";
-    }
-    buttonContact.addEventListener('mouseup', e => {
-        document.querySelector("#contact").style.transition = "all 0.4s ease-in-out";
-        document.querySelector("#contact").scrollIntoView({behavior: "smooth"});  
-        buttonContact.style.transition = "all 1s ease-in-out";
-        buttonContact.style.color = "#222222";        
-    });
 
     // Dark-theme Button in header
     // Dark-theme button grey on hover on header
-    header.onmouseover = function() {
-        buttonDarkTheme.style.transition = "all 0.2s ease-in-out";
-        if (mouseOverDarkMode) {
-            buttonDarkTheme.style.color = "#222222";
-            buttonDarkTheme.style.cursor = "pointer";
-        } else {
-            buttonDarkTheme.style.color = "#f3f1f1";
-        }
-    }
-    header.onmouseout = function() {
-        buttonDarkTheme.style.transition = "all 0.4s ease-in-out";
-        buttonDarkTheme.style.color = "#fff";
-    }
-    // Dark-theme button black on hover
-    buttonDarkTheme.onmouseover = function() {
-        mouseOverDarkMode = true;
-    }
-    buttonDarkTheme.onmouseout = function() {
-        mouseOverDarkMode = false;
-    }
+    // header.onmouseover = function() {
+    //     buttonDarkTheme.style.transition = "all 0.2s ease-in-out";
+    //     if (mouseOverDarkMode) {
+    //         buttonDarkTheme.style.color = "#222222";
+    //         buttonDarkTheme.style.cursor = "pointer";
+    //     } else {
+    //         buttonDarkTheme.style.color = "#f3f1f1";
+    //     }
+    // }
+    // header.onmouseout = function() {
+    //     buttonDarkTheme.style.transition = "all 0.4s ease-in-out";
+    //     buttonDarkTheme.style.color = "#fff";
+    // }
+    // // Dark-theme button black on hover
+    // buttonDarkTheme.onmouseover = function() {
+    //     mouseOverDarkMode = true;
+    // }
+    // buttonDarkTheme.onmouseout = function() {
+    //     mouseOverDarkMode = false;
+    // }
 
     // Open project buttons on hover
     buttonOpen.forEach(element => {
@@ -197,84 +172,31 @@ window.onload = function () {
         });
     });
 
-
+    // Buttons on contact section on hover 
+    const contactButtonsHover = function (button, colorOnHover) {
+        button.hover(
+            function () {
+                $(this).css("transition", "all 0.1s ease-in-out")
+                    .css("color", colorOnHover)
+                    .css("cursor", "pointer");
+            },
+            // off hover
+            function () {
+                $(this).css("transition", "all 0.4s ease-in-out")
+                    .css("color", "#222222");
+            }
+        );
+    }
 
     // Email link on hover
-    mailLink.onmouseover = function() {
-        mailLink.style.transition = "all 0.1s ease-in-out";
-        mailLink.style.color = "#ee0000";
-        mailLink.style.cursor = "pointer";
-    }
-    mailLink.onmouseout = function() {
-        mailLink.style.transition = "all 0.4s ease-in-out";
-        mailLink.style.color = "#222222";
-    }
-
+    contactButtonsHover($mailLink, "#ee0000");
 
     // Icon buttons in the bottom
-    githubButton.onmouseover = function() {
-        githubButton.style.transition = "all 0.1s ease-in-out";
-        githubButton.style.color = "#8831A8";
-        githubButton.style.cursor = "pointer";
-    }
-    githubButton.onmouseout = function() {
-        githubButton.style.transition = "all 0.4s ease-in-out";
-        githubButton.style.color = "#222222";
-    }
+    contactButtonsHover($githubButton, "#8831A8");
+    contactButtonsHover($linkedinButton, "#0A66C2");
+    contactButtonsHover($mailButton, "#ee0000");
 
-    linkedinButton.onmouseover = function() {
-        linkedinButton.style.transition = "all 0.1s ease-in-out";
-        linkedinButton.style.color = "#0A66C2";
-        linkedinButton.style.cursor = "pointer";
-    }
-    linkedinButton.onmouseout = function() {
-        linkedinButton.style.transition = "all 0.4s ease-in-out";
-        linkedinButton.style.color = "#222222";
-    }
-
-    // instagramButton.onmouseover = function() {
-    //     instagramButton.style.transition = "all 0.1s ease-in-out";
-    //     instagramButton.style.color = "#F35934";
-    //     instagramButton.style.cursor = "pointer";
-    // }
-
-    // instagramButton.onmouseout = function() {
-    //     instagramButton.style.transition = "all 0.4s ease-in-out";
-    //     instagramButton.style.color = "#222222";
-    // }
-
-    // facebookButton.onmouseover = function() {
-    //     facebookButton.style.transition = "all 0.1s ease-in-out";
-    //     facebookButton.style.color = "#1877F2";
-    //     facebookButton.style.cursor = "pointer";
-    // }
-    // facebookButton.onmouseout = function() {
-    //     facebookButton.style.transition = "all 0.4s ease-in-out";
-    //     facebookButton.style.color = "#222222";
-    // }
-
-    // telegramButton.onmouseover = function() {
-    //     telegramButton.style.transition = "all 0.1s ease-in-out";
-    //     telegramButton.style.color = "#229FDA";
-    //     telegramButton.style.cursor = "pointer";
-    // }
-    // telegramButton.onmouseout = function() {
-    //     telegramButton.style.transition = "all 0.4s ease-in-out";
-    //     telegramButton.style.color = "#222222";
-    // }
-
-    mailButton.onmouseover = function() {
-        mailButton.style.transition = "all 0.1s ease-in-out";
-        mailButton.style.color = "#ee0000";
-        mailButton.style.cursor = "pointer";
-    }
-    mailButton.onmouseout = function() {
-        mailButton.style.transition = "all 0.4s ease-in-out";
-        mailButton.style.color = "#222222";
-    }
-
-
-    // Arrows appear in the bottom
+    // Arrows appear in the bottom with delay
     function arrowsAppear() {
         setTimeout(() => {
             arrow1.style.transition = "all 0.6s ease-in-out";
@@ -571,17 +493,6 @@ window.onload = function () {
 
         }
     } 
-
-
-
-
-
-    
-    // example use
-    // var div = document.querySelector('div');
-    // var divOffset = offset(div);
-    // console.log(divOffset.left, divOffset.top);
-
     
 
     ////////////////////////////////////////////
