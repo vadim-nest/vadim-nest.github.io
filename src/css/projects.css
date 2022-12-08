@@ -1,0 +1,19 @@
+#projects-part {
+  min-height: 100vh;
+}
+
+.projects-header {
+  margin-top: 10vh;
+  text-align: center;
+}
+
+.project-video-wrapper {
+  width: 90vw;
+  margin-left: auto;
+  margin-right: auto;
+
+}
+
+.project-video {
+  width: 100%;
+}

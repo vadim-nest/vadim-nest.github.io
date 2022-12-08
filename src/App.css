@@ -1,0 +1,57 @@
+:root {
+  /* --cod-gray: #0f0f0f; */
+  --cod-gray-lighter: #181818;
+  --white: #fff;
+  --red: #EE0000;
+  --yellow-main: #ffcc00;
+  --dark-gray: #393939;
+}
+
+html {
+  /* width: 100vw; */
+}
+
+body {
+  background-color: var(--cod-gray);
+  color: var(--white);
+  font-family: 'Open Sans', sans-serif;
+  margin: 0;
+  padding: 0;
+  font-size: 18px;
+}
+
+h1, h2 {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 200;
+}
+
+h3, p {
+  font-family: 'Open Sans', sans-serif;
+}
+
+h1 {
+  font-size: 36px;
+}
+
+h2 {
+  font-size: 27px;
+}
+
+h3 {
+  font-size: 22px;
+}
+
+.h-e-text {
+  color: var(--white);
+  opacity: 0.87;
+}
+
+.m-e-text {
+  color: var(--white);
+  opacity: 0.60;
+}
+
+.dis-text {
+  color: var(--white);
+  opacity: 0.38;
+}

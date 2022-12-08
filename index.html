@@ -1,79 +1,14 @@
 <!DOCTYPE html>
-<html lang="en" dit="ltr">
-    <head>
-        <meta charset="UTF-8"/>
-        <meta name="author" content="Vadim Gnezdyshkin">
-        <meta name="description" content="My Portfolio Website">
-        <!-- <meta name="viewport" content="width=device-width, initial-scale=1.0"> -->
-        <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1">
-        <title>Vadim Gnezdyshkin</title>
-        <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500&family=Open+Sans&display=swap" rel="stylesheet">
-        <link rel="stylesheet" href="css/styles.css">
-        <script type="module" src="script.js"></script>
-        <script src="https://kit.fontawesome.com/144ea23680.js" crossorigin="anonymous"></script>
-    </head>
-    <body>
-        <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
-        <div class="header">
-            <h2 id="logo"><span class="red">V</span>G</h2>
-            <button id="button-about">About</button>
-            <button id="button-projects">Projects</button>
-            <button id="button-contact">Contact</button>
-            <i id="dark-theme" class="fas fa-adjust fa-2x"></i>
-        </div>
-        <div class="wrapper about">
-            <div id="portrait">
-                <img src="https://am3pap006files.storage.live.com/y4m8hWZ4qIFk3y2WlemcueRXaBKHZwjfK3uZQ9xpUwAO7h5u8g_XilQWwqS6b_GVGwfzT4ryrbyhhEmxalYbm_ty5-TIj9QhHigZ7MA2bOZw_l0MkK6PAw5XRvVsHUiWT4pFjkSolaIBCR4Pcq1T2SbAzAox9VrAvmKnWb78PKK25zJ4Nzsvm5omX1HG1iD-yTE?width=660&height=660&cropmode=none" width="660" height="660" />            
-            </div>
-            <div id="about">
-                <h1><span class="red">V</span>adim Gnezdyshkin</h1>
-                <h3>Front-End Developer in London, UK</h3>
-                <p>JavaScript, CSS, HTML</p>
-                <button onclick="window.open('/cv/CVindex.html');" id="button-open-cv" class="button-open">View CV</button>
-                <!-- <h3>CV<h3>
-                <h3>About<h3> -->
-            </div>
-            <div class="break"></div>
-            <div id="scroll">
-                <i class="fas fa-chevron-down fa-5x arrow1"></i>
-                <div class="break"></div>
-                <i class="fas fa-chevron-down fa-3x arrow2"></i>
-            </div>
-        </div>
-        <div id="projects">
-            <h1>Projects</h1> 
-            <div id="everyProject">
-                <div id="stopwatch">
-                    <div id="stopwatchPic">
-                        <img src="pics/SWgif.GIF" width="800" height="600" />
-                        <!-- <img src="https://am3pap006files.storage.live.com/y4mLAn6XQOH2SPCVPz3NCvOalGFZ1r9w3ZSHGgE2_DNEugZB1Ab8npEsfiYzD6Tj3B_JO9FWAAh7jfsW_tap_gjLRV-cwCZVd8PggneQYs7QmkfjiHnZim6L_2Gsptku2KwF9q9fxqxVcEBI7pcqhGFu74kgDwfTl9RtqLqVZ1pun62YceL4gcQzJASczsXaffR?width=660&height=496&cropmode=none" width="660" height="496" /> -->
-                    </div>
-                    <div class="aboutProjects">
-                        
-                        <h2><span class="red">S</span>topwatch</h2>
-                        <p>Simple stopwatch made with Vanilla JavaScript.</p>
-                        <button onclick="location.href='/stopwatch/SW.html'" id="button-open-project" class="button-open">View</button>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div id="contact">
-            <h1>Let<span class="red">'</span>s Talk</h1> 
-            <div id="text-and-links">
-                <div id="contact-text">
-                    <p>Feel free to message me.</p>
-                    <h2>Vadim Gnezdyshkin</h2>
-                    <p>Front-End Web Developer</p>
-                    <p class="email-word">E<span class="red">m</span>ail</p>
-                    <a href="mailto:vadim@gne.me.uk" class="mail-link">vadim@gne.me.uk</a>
-                </div>
-                <div id="links-row">
-                    <i onclick="window.open('https://github.com/vadim-nest');" class="icon fab fa-github fa-3x" target="_blank"></i>
-                    <i onclick="window.open('https://www.linkedin.com/in/vadim-gnezdyshkin');" class="icon fab fa-linkedin-in fa-3x"></i>
-                    <a href="mailto:vadim@gne.me.uk" class="icon mail-icon">@</a>
-                </div>
-            </div>
-        </div>
-        <button id="contact-float">
-            <div id="float-text">Contact</div></button>
-    </body>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Vadim Gnezdyshkin</title>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500&family=Open+Sans&display=swap" rel="stylesheet">
+  </head>
+  <body>
+    <div id="root"></div>
+    <script type="module" src="/src/main.tsx"></script>
+  </body>
+</html>
