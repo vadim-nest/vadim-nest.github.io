@@ -1,0 +1,38 @@
+#navbar {
+  background-color: var(--cod-gray-lighter);
+  height: 7vh;
+  display: flex;
+  justify-content: space-between;
+  position: fixed;
+  width: 100vw;
+  border-bottom: 1px solid var(--dark-gray);
+  z-index: 1;
+}
+
+#logo {
+  margin: auto 0px auto 20px;
+}
+
+#nav-buttons {
+  display: flex;
+}
+
+.nav-button {
+  background-color: var(--cod-gray-lighter);
+  color: var(--white);
+  border: 3px solid var(--cod-gray-lighter);
+  /* border-bottom: 3px solid var(--yellow-main); */
+  margin-right: 10px;
+  margin-left: 0px;
+}
+
+.nav-button:first-child {
+  border-bottom: 3px solid var(--yellow-main);
+}
+
+.nav-button p {
+  font-size: 18px;
+  margin-top: auto;
+  margin-bottom: auto;
+}
+
