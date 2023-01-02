@@ -1,0 +1,53 @@
+
+#the-arrow {
+  position: absolute;
+  top: 7vh;
+  left: 5%;
+  width: 90vw;
+  /* display: inline-block;
+  height: 100%; */
+}
+
+#wrap,
+svg {
+  /* border: 1px solid; */
+  /* width: 90vw; */
+  /* height: 2000px; */
+}
+
+#wrap {
+  /* overflow: scroll; */
+  height: 100vh;
+  width: 100%;
+  position: absolute;
+  top: 7vh;
+  left: 5%;
+  width: 90vw;
+}
+
+svg {
+  /* height: 300vh; */
+  width: 100%;
+}
+
+use {
+  fill: none;
+}
+
+path {
+  stroke-width: 4px;
+}
+
+#mask {
+  stroke: white;
+}
+
+marker {
+  overflow: visible;
+}
+
+.arrowHead {
+  /* width: 100px;
+  height: 100px; */
+  fill: rgb(0, 255, 76);
+}
