@@ -55,3 +55,9 @@ h3 {
   color: var(--white);
   opacity: 0.38;
 }
+
+#main-page-wrapper {
+  background-color: var(--cod-gray-lighter);
+  width: 100vw;
+  padding: 0;
+}
