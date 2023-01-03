@@ -5,6 +5,10 @@
   --red: #EE0000;
   --yellow-main: #ffcc00;
   --dark-gray: #393939;
+  --darker-gray: #2B2B2B;
+  --light-gray: #565656;
+  --very-dark: #141414;
+  --dark-yellow: #473C0D;
 }
 
 html {
