@@ -1,38 +1,28 @@
-
 #the-arrow {
   position: absolute;
   top: 7vh;
   left: 5%;
   width: 90vw;
-  /* display: inline-block;
-  height: 100%; */
+  /* transition: stroke-dashoffset 2s ease-out; */
+
 }
 
 #wrap,
 svg {
-  /* border: 1px solid; */
-  /* width: 90vw; */
-  /* height: 2000px; */
+  width: 100%;
 }
 
 #wrap {
-  /* overflow: scroll; */
   height: 100vh;
-  width: 100%;
   position: absolute;
   top: 7vh;
   left: 5%;
   width: 90vw;
-}
-
-svg {
-  /* height: 300vh; */
-  width: 100%;
   pointer-events: none;
 }
 
-use {
-  fill: none;
+svg {
+  width: 100%;
 }
 
 path {
@@ -41,6 +31,7 @@ path {
 
 #mask {
   stroke: white;
+  /* transition: stroke-dashoffset 2s ease-out; */
 }
 
 marker {
@@ -48,7 +39,7 @@ marker {
 }
 
 .arrowHead {
-  /* width: 100px;
-  height: 100px; */
-  fill: rgb(0, 255, 76);
+  fill: var(--yellow-main);
+  /* transition: 2s ease-out; */
 }
+

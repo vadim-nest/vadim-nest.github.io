@@ -2,3 +2,116 @@
 #contact-part {
   height: 100vh;
 }
+
+#contact-part h1 {
+  color: var(--yellow-main);
+  margin-top: 9.5vh;
+  margin-left: 5%;
+}
+
+.contact-form {
+  display: flex;
+  flex-direction: column;
+  margin-left: auto;
+  margin-right: auto;
+  width: 80vw;
+}
+
+.contact-field {
+  background-color: var(--darker-gray);
+  /* box-shadow: 0 2px 1px var(--cod-gray-lighter),
+  1px 3px 0px var(--cod-gray-lighter),
+  2px 5px 0px var(--cod-gray-lighter),
+  3px 7px 0px var(--cod-gray-lighter),
+  4px 9px 0px var(--cod-gray-lighter),
+  5px 11px 0px var(--cod-gray-lighter),
+  6px 13px 0px var(--cod-gray-lighter); */
+  /* z-index: 4; */
+  display: flex;
+  border: 3px solid var(--darker-gray);
+  width: 100%;
+  height: 40px;
+  /* background-color: black; */
+  border-radius: 10px;
+}
+
+/* .contact-field:hover {
+  transition: ease-in 0.08s;
+  box-shadow: 0 2px 1px var(--cod-gray-lighter),
+  1px 3px 0px var(--cod-gray-lighter),
+  2px 5px 0px var(--cod-gray-lighter),
+  3px 7px 0px var(--cod-gray-lighter),
+  4px 9px 0px var(--cod-gray-lighter),
+  5px 11px 0px var(--cod-gray-lighter),
+  6px 13px 0px var(--cod-gray-lighter);
+  z-index: 4;
+} */
+
+.contact-field:focus {
+  transition: ease-in 0.08s;
+  box-shadow: 0 2px 1px var(--cod-gray-lighter),
+  1px 3px 0px var(--cod-gray-lighter),
+  2px 5px 0px var(--cod-gray-lighter),
+  3px 7px 0px var(--cod-gray-lighter),
+  4px 9px 0px var(--cod-gray-lighter);
+  z-index: 4;
+  outline: none;
+}
+
+.message-field {
+  height: 140px;
+
+}
+
+.contact-form label {
+}
+
+
+.contact-form label:hover {
+  transition: ease-in 0.1s;
+
+  z-index: 4;
+}
+
+.contact-form p {
+  margin-bottom: 5px;
+  /* text-shadow: 0 2px 1px #181818,
+  1px 3px 0px #181818,
+  2px 5px 0px #181818,
+  3px 7px 0px #181818,
+  4px 9px 0px #181818,
+  5px 11px 0px #181818,
+  6px 13px 0px #181818; */
+  position: relative;
+  z-index: 3;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 18px;
+  /* opacity: 0.87; */
+  /* color: black; */
+  z-index: 0;
+
+}
+
+.submit-button {
+  color: white;
+  font-size: 18px;
+  font-family: 'Montserrat', sans-serif;
+  margin-top: 50px;
+  background-color: var(--cod-gray-lighter);
+  z-index: 0;
+  border: 4px dashed var(--yellow-main);
+  border-radius: 10px;
+  margin-left: auto;
+  margin-right: auto;
+  width: 100%;
+  height: 50px;
+  box-shadow: 0 2px 1px var(--cod-gray-lighter),
+  1px 3px 0px var(--cod-gray-lighter),
+  2px 5px 0px var(--cod-gray-lighter),
+  3px 7px 0px var(--cod-gray-lighter),
+  4px 9px 0px var(--cod-gray-lighter);
+}
+
+.submit-button:hover {
+  /* border: 4px solid var(--yellow-main); */
+}
