@@ -1,9 +1,5 @@
 #projects-part {
   height: 100vh;
-  /* display: flex;
-  flex-direction: column;
-  justify-content: space-around; */
-  /* flex-wrap: wrap; */
 }
 
 .projects-header {
@@ -13,7 +9,7 @@
 .project-video-wrapper {
   width: 87vw;
   margin-left: 5%;
-  z-index: 2;
+  z-index: 4;
   position: relative;
 }
 
@@ -25,11 +21,10 @@
 .project-description {
   background-color: var(--darker-gray);
   border-radius: 10px;
-  height: 67.3%;
+  height: 603px;
   width: 83vw;
   margin-left: auto;
   margin-right: 2%;
-  z-index: 0;
   position: relative;
   top: -200px;
   display: flex;
@@ -55,14 +50,11 @@
   display: flex;
   flex-direction: column;
   margin-top: auto;
-  /* position: absolute; */
-  /* bottom: 20px; */
 }
 
 .stack {
   overflow-x: hidden;
   width: 82vw;
-  /* padding-right: 10px; */
 }
 
 #front-stack, #back-stack {
@@ -78,7 +70,6 @@
 }
 
 .bubble {
-  /* font-size: 16px; */
   width: fit-content;
   height: fit-content;
   padding: 3px 15px 3px 15px;
@@ -125,8 +116,6 @@
 }
 
 .links {
-  /* margin-left: auto;
-  margin-right: auto; */
   display: flex;
   justify-content: space-around;
   margin-top: 25px;
@@ -153,13 +142,9 @@
 }
 
 .arrow-right {
-  /* stroke-width: 4; */
   height: 25px;
-  /* fill: red; */
   transform: rotate(180deg) scale(1.4);
-  /* transform: scale(2); */
   margin-right: 15vw;
-  /* margin-top: -10px; */
   align-self: start;
 }
 
@@ -169,6 +154,5 @@
 .arrow-right .arrow-next-color {
   fill: var(--yellow-main);
   fill-opacity: 1;
-  /* height: 30px; */
 }
 

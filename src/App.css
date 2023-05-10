@@ -16,12 +16,14 @@ html {
 }
 
 body {
-  background-color: var(--cod-gray);
+  /* background-color: var(--cod-gray); */
   color: var(--white);
   font-family: 'Open Sans', sans-serif;
   margin: 0;
   padding: 0;
   font-size: 18px;
+  height: 100%;
+
 }
 
 h1, h2 {
@@ -64,4 +66,25 @@ h3 {
   background-color: var(--cod-gray-lighter);
   width: 100vw;
   padding: 0;
+}
+
+.light-big, .light-small {
+  position: absolute;
+  /* margin-top: 100%; */
+  /* top: 165vh; */
+  bottom: -200vh;
+  /* height: 100%; */
+  width: 100vw;
+  /* background-color: var(--cod-gray-lighter); */
+  pointer-events: none;
+  visibility: hidden;
+}
+
+.light-big {
+  z-index: 0;
+  /* margin-top: -100px; */
+}
+
+.light-small {
+  z-index: 1;
 }

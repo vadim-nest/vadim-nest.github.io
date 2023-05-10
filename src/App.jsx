@@ -6,6 +6,9 @@ import Projects from './components/projects';
 import Contact from './components/contact';
 import TheArrow from './components/theArrow';
 
+import lightBig from './assets/light-big.svg';
+import lightSmall from './assets/light-small.svg';
+
 function App() {
   // const [count, setCount] = useState(0);
 
@@ -17,6 +20,8 @@ function App() {
         <Projects />
         <Contact />
         <TheArrow />
+        <img className='light-big' src={lightBig} />
+        <img className='light-small' src={lightSmall} />
       </div>
 
     </>

@@ -19,7 +19,7 @@ export default function Projects() {
 
   const arrowNext = (
     <svg width="15" height="18" viewBox="0 0 15 18" fill="none" xmlns="http://www.w3.org/2000/svg">
-      <path className="arrow-next-color" d="M-4.93596e-05 9.02381L15.0005 0.364449L14.9994 17.685L-4.93596e-05 9.02381Z" fill="white" fill-opacity="0.38"/>
+      <path className="arrow-next-color" d="M-4.93596e-05 9.02381L15.0005 0.364449L14.9994 17.685L-4.93596e-05 9.02381Z" fill="white" fillOpacity="0.38"/>
     </svg>
   );
 
@@ -82,7 +82,7 @@ export default function Projects() {
 
       <div id='arrows'>
         <div className='arrow-left'>{arrowNext}</div>
-        <div className='arrow-right'>{arrowNext}</div>
+        {/* <div className='arrow-right'>{arrowNext}</div> */}
       </div>
     </div>
   );
