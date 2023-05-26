@@ -40,6 +40,9 @@ marker {
 
 .arrowHead {
   fill: var(--yellow-main);
-  /* transition: 2s ease-out; */
+  transition: 0.3s ease-out;
 }
 
+#mask, #arrowHead {
+  transition: all 0.5s ease-out;
+}

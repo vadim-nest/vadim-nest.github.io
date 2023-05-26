@@ -4,6 +4,8 @@ import '../css/projects.css';
 // // Not in use
 // import { Player } from 'video-react';
 
+// https://betterprogramming.pub/how-to-create-react-infinite-slider-22b76cbd7a9
+
 import tempPic from '../Macbook_pic.png';
 
 import jsLogo from '../assets/stack/js.svg';
@@ -53,6 +55,7 @@ export default function Projects() {
               <img className='bubble-img' src={cssLogo} />
               <p>CSS</p>
             </div>
+
           </div>
 
           <div id='back-stack' className='stack'>
@@ -82,7 +85,7 @@ export default function Projects() {
 
       <div id='arrows'>
         <div className='arrow-left'>{arrowNext}</div>
-        {/* <div className='arrow-right'>{arrowNext}</div> */}
+        <div className='arrow-right'>{arrowNext}</div>
       </div>
     </div>
   );

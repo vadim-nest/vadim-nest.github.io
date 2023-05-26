@@ -1,5 +1,6 @@
 #projects-part {
   height: 100vh;
+  min-height: 700px;
 }
 
 .projects-header {
@@ -21,7 +22,8 @@
 .project-description {
   background-color: var(--darker-gray);
   border-radius: 10px;
-  height: 603px;
+  height: 67.5vh;
+  min-height: 500px;
   width: 83vw;
   margin-left: auto;
   margin-right: 2%;
@@ -129,7 +131,7 @@
 #arrows {
   height: 30px;
   position: relative;
-  top: -200px;
+  top: -205px;
   margin-top: 38px;
   display: flex;
   justify-content: space-between;
@@ -144,15 +146,43 @@
 .arrow-right {
   height: 25px;
   transform: rotate(180deg) scale(1.4);
-  margin-right: 15vw;
+  margin-right: 14vw;
   align-self: start;
+  transition: 2s ease-out;
+
 }
 
 .arrow-next-color {
 }
 
-.arrow-right .arrow-next-color {
+/* .arrow-right .arrow-next-color {
   fill: var(--yellow-main);
   fill-opacity: 1;
+} */
+
+/* @keyframes scroll {
+  0% {
+    left: 0;
+  }
+  100% {
+    left: -100%;
+  }
 }
+
+.stack {
+  width: 200%;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  position: absolute;
+  left: 0;
+  animation: scroll 15s linear infinite;
+}
+
+.bubble {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  width: 20rem;
+} */
 
