@@ -33,6 +33,8 @@
   height: 40px;
   /* background-color: black; */
   border-radius: 10px;
+  outline: var(--darker-gray) solid 0px;
+
 }
 
 /* .contact-field:hover {
@@ -49,19 +51,30 @@
 
 .contact-field:focus {
   transition: ease-in 0.08s;
-  box-shadow: 0 2px 1px var(--cod-gray-lighter),
+  box-shadow:
+  0 0px 1px var(--cod-gray-lighter),
+  0 2px 1px var(--cod-gray-lighter),
   1px 3px 0px var(--cod-gray-lighter),
   2px 5px 0px var(--cod-gray-lighter),
   3px 7px 0px var(--cod-gray-lighter),
-  4px 9px 0px var(--cod-gray-lighter);
+  4px 9px 0px var(--cod-gray-lighter),
+  5px 11px 0px var(--cod-gray-lighter);
   z-index: 4;
-  outline: none;
+  /* width: 102%;
+  height: 42px; */
+  outline: var(--darker-gray) solid 2px;
+
 }
 
 .message-field {
   height: 140px;
 
 }
+
+/* .message-field:focus {
+  /* height: 142px; */
+  /* outline: var(--darker-gray) solid 2px;
+} */
 
 .contact-form label {
 }

@@ -2,47 +2,50 @@ import '../css/theArrow.css';
 import React, { useEffect } from 'react';
 
 export default function TheArrow() {
-  function getAngle(offset) {
-    const delta = 1; // A small value to calculate the tangent
-    const point1 = thePath.getPointAtLength(offset);
-    const point2 = thePath.getPointAtLength(offset + delta);
-    const dx = point2.x - point1.x;
-    const dy = point2.y - point1.y;
-    const angle = Math.atan2(dy, dx) * (180 / Math.PI);
-    return angle;
-  }
 
-  function updateArrowPosition(dashoffset) {
-    const offset = thePath.getTotalLength() - dashoffset;
-    const arrowPosition = thePath.getPointAtLength(offset);
-    let angle;
 
-    // If the dashoffset is between 210 and 810, set the angle to 90 degrees
-    angle = getAngle(offset);
 
-    if (dashoffset > 300 && dashoffset < 810) angle = 0;
-    if (dashoffset < 20) angle = 180;
 
-    const arrowHead = document.getElementById('arrowHead');
+  // function getAngle(offset) {
+  //   const delta = 1; // A small value to calculate the tangent
+  //   const point1 = thePath.getPointAtLength(offset);
+  //   const point2 = thePath.getPointAtLength(offset + delta);
+  //   const dx = point2.x - point1.x;
+  //   const dy = point2.y - point1.y;
+  //   const angle = Math.atan2(dy, dx) * (180 / Math.PI);
+  //   return angle;
+  // }
 
-    // Adjust these values to align the arrowhead with the path
-    let arrowHeadOffsetX = 1.5;
-    const arrowHeadOffsetY = -3;
+  // function updateArrowPosition(dashoffset) {
+  //   const offset = thePath.getTotalLength() - dashoffset;
+  //   const arrowPosition = thePath.getPointAtLength(offset);
+  //   let angle;
 
-    if (dashoffset < 10) {
-      arrowHeadOffsetX += 10; // Adjust this value to shift the arrow to the right
-    } else {
-      arrowHeadOffsetX = 1.5;
-    }
+  //   // If the dashoffset is between 210 and 810, set the angle to 90 degrees
+  //   angle = getAngle(offset);
 
-    arrowHead.setAttribute(
-      'transform',
-      `translate(${arrowPosition.x + arrowHeadOffsetX},${
-        arrowPosition.y + arrowHeadOffsetY
-      }) rotate(${angle})`
-    );
-    arrowHead.style.visibility = 'visible';
-  }
+  //   if (dashoffset > 300 && dashoffset < 810) angle = 0;
+  //   if (dashoffset < 20) angle = 180;
+
+  //   const arrowHead = document.getElementById('arrowHead');
+
+  //   // Adjust these values to align the arrowhead with the path
+  //   let arrowHeadOffsetX = 1.5;
+  //   const arrowHeadOffsetY = -3;
+
+  //   if (dashoffset < 10) {
+  //     arrowHeadOffsetX += 10; // Adjust this value to shift the arrow to the right
+  //   } else {
+  //     arrowHeadOffsetX = 1.5;
+  //   }
+  //   console.log(arrowPosition.x + arrowHeadOffsetX, arrowPosition.y + arrowHeadOffsetY);
+    // arrowHead.setAttribute(
+    //   'transform',
+    //   `translate(${arrowPosition.x + arrowHeadOffsetX},${
+    //     arrowPosition.y + arrowHeadOffsetY
+    //   }) rotate(${angle})`
+    // );
+  // }
 
   useEffect(() => {
     const thePath = document.getElementById('thePath');
@@ -54,7 +57,7 @@ export default function TheArrow() {
     let dashoffset = l - 1600;
     mask.style.strokeDashoffset = dashoffset;
 
-    updateArrowPosition(dashoffset);
+    // updateArrowPosition(dashoffset);
 
     const lengthAbout = 1620;
     const lengthProjects = 410;
@@ -70,6 +73,35 @@ export default function TheArrow() {
       if (dashoffset > 210 && dashoffset < 810) dashoffset = lengthProjects;
       if (dashoffset < 210) dashoffset = dashoffset + 200;
 
+      // dashoffset === lengthAbout ? arrowHead.style.visibility = 'visible' : arrowHead.style.visibility = 'hidden';
+
+      if (dashoffset === lengthAbout) {
+        document.getElementById('arrowHead').style.opacity = '1';
+      } else {
+        document.getElementById('arrowHead').style.opacity = '0';
+      }
+
+      // requestAnimationFrame(() => {
+      //   if (dashoffset === lengthAbout) {
+      //     document.getElementById('arrowHead').style.visibility = 'visible';
+      //   } else {
+      //     document.getElementById('arrowHead').style.visibility = 'hidden';
+      //   }
+      // });
+
+      document.getElementById('arrowHead').setAttribute(
+        'transform',
+        `translate(254, 713) rotate(90)`
+      );
+
+
+      if (dashoffset === lengthProjects) {
+        document.querySelector('.arrow-right .arrow-next-color').style.fill = 'var(--yellow-main)';
+        document.querySelector('.arrow-right .arrow-next-color').style.fillOpacity = '1';
+      } else {
+        document.querySelector('.arrow-right .arrow-next-color').style.fill = 'var(--light-gray)';
+      }
+
       if (dashoffset < 10) {
         document.querySelector('.light-big').style.visibility = 'visible';
         document.querySelector('.light-small').style.visibility = 'visible';
@@ -78,9 +110,10 @@ export default function TheArrow() {
         document.querySelector('.light-small').style.visibility = 'hidden';
       }
 
+
       mask.style.strokeDashoffset = dashoffset;
       console.log(dashoffset);
-      updateArrowPosition(dashoffset);
+      // updateArrowPosition(dashoffset);
     });
   }, []);
 
@@ -110,16 +143,17 @@ export default function TheArrow() {
         <use
           id='maskedPath'
           xlinkHref='#thePath'
-          strokeDasharray='8 6'
+          strokeDasharray='10 6'
           mask='url(#mask1)'
+          // strokeLinecap="round"
         />
         <path
           id='arrowHead'
           className='cool arrowHead'
           d='M0,-15L0,-12L23,0L0,12L0,15'
-          visibility='hidden'
+          // visibility='hidden'
         />
-      </svg>
+        </svg>
     </div>
   );
 }
