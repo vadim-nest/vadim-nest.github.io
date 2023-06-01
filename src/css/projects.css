@@ -8,15 +8,16 @@
 }
 
 .project-video-wrapper {
-  width: 87vw;
-  margin-left: 5%;
+  /* width: 87vw; */
+  /* margin-left: 5%; */
   z-index: 4;
   position: relative;
 }
 
 .project-video {
-  width: 100%;
+  width: 87vw;
   border-radius: 10px;
+  margin-right: 250px;
 }
 
 .project-description {
@@ -31,7 +32,6 @@
   top: -200px;
   display: flex;
   flex-direction: column;
-
 }
 
 .project-description h1 {
@@ -56,11 +56,11 @@
 
 .stack {
   overflow-x: hidden;
-  width: 82vw;
+  width: 83vw;
 }
 
 #front-stack, #back-stack {
-  display: flex;
+  /* display: flex; */
 }
 
 #front-stack {
@@ -69,6 +69,7 @@
 
 #back-stack {
   flex-direction: row-reverse;
+
 }
 
 .bubble {
@@ -155,34 +156,6 @@
 .arrow-next-color {
 }
 
-/* .arrow-right .arrow-next-color {
-  fill: var(--yellow-main);
-  fill-opacity: 1;
-} */
-
-/* @keyframes scroll {
-  0% {
-    left: 0;
-  }
-  100% {
-    left: -100%;
-  }
+.animate__animated.animate__fadeInDown {
+  --animate-duration: 500ms;
 }
-
-.stack {
-  width: 200%;
-  display: flex;
-  align-items: center;
-  justify-content: space-around;
-  position: absolute;
-  left: 0;
-  animation: scroll 15s linear infinite;
-}
-
-.bubble {
-  display: flex;
-  justify-content: center;
-  align-items: flex-start;
-  width: 20rem;
-} */
-
