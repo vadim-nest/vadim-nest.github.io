@@ -1,0 +1,30 @@
+.carousel {
+  overflow: hidden;
+  white-space: nowrap;
+}
+
+.carousel-moving-container {
+  display: flex;
+  animation: scroll 120s linear infinite; /*  Adjust the scrolling speed */
+}
+
+.moving-slower {
+  animation: scroll 190s linear infinite; /*  Adjust the scrolling speed */
+}
+
+.carousel-item {
+  display: inline-block;
+}
+
+@keyframes scroll {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-1000%);
+  }
+}
+
+.carousel-moving-container:hover {
+  animation-play-state: paused;
+}

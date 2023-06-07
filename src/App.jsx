@@ -19,7 +19,7 @@ function App() {
         <About />
         <Projects />
         <Contact />
-        <TheArrow />
+        {/* <TheArrow /> */}
         <img className='light-big' src={lightBig} />
         <img className='light-small' src={lightSmall} />
       </div>
