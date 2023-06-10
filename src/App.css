@@ -23,7 +23,6 @@ body {
   padding: 0;
   font-size: 18px;
   height: 100%;
-
 }
 
 h1, h2 {
@@ -45,6 +44,10 @@ h2 {
 
 h3 {
   font-size: 22px;
+}
+
+input, textarea {
+  font-family: 'Open Sans', sans-serif;
 }
 
 .h-e-text {

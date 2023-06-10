@@ -127,29 +127,23 @@
 
 .github-link {
   fill: white;
-  transition: color 0.2s ease;
+  transition: fill 0.2s ease;
 }
 
 .github-div:hover .github-link,
 .github-div:active .github-link {
   fill: #8831a8;
+  fill-opacity: 1;
 }
 
 .website-link {
-  transition: color 0.2s ease;
+  transition: all 0.2s ease;
 }
 
 .website-div:hover .website-link,
 .website-div:active .website-link {
   stroke: var(--yellow-main);
-}
-
-.website-link {
-
-}
-
-.links img:first-child {
-  /* margin-right: */
+  stroke-opacity: 1;
 }
 
 #arrows {
