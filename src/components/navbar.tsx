@@ -3,7 +3,7 @@ import '../css/navbar.css';
 window.addEventListener('scroll', handleNavScroll);
 
 function handleNavScroll() {
-  
+
 }
 
 export default function Navbar() {
