@@ -24,15 +24,19 @@
   /* border-bottom: 3px solid var(--yellow-main); */
   margin-right: 10px;
   margin-left: 0px;
+  font-size: 18px;
+  cursor: pointer;
 }
 
-.nav-button:first-child {
+.nav-button:hover {
+  opacity: 0.87;
+}
+
+.current-view {
+  opacity: 0.87;
   border-bottom: 3px solid var(--yellow-main);
 }
 
 .nav-button p {
-  font-size: 18px;
-  margin-top: auto;
-  margin-bottom: auto;
 }
 

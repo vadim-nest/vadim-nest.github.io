@@ -6,7 +6,7 @@ import 'flickity/css/flickity.css';
 import Carousel from './carousel.jsx';
 
 import videoTest from '../assets/projects-videos/video1809203057.mp4'; // TODO: Replace with proper videos
-import amazethingVideo from '../assets/projects-videos/Amazething.mp4';
+import amazethingVideo from '../assets/projects-videos/Amazething-720p.mp4';
 
 import jsLogo from '../assets/stack/js.svg';
 import cssLogo from '../assets/stack/css.svg';
