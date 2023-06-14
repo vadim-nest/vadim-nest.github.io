@@ -7,8 +7,18 @@ export default function TheArrow() {
   const wrapRef = useRef(null);
   const arrowHeadRef = useRef(null);
 
-  useEffect(() => {
+  let vh = window.innerHeight;
+  const projectsPos = vh;
 
+  const handleNavClick = () => {
+    console.log('click');
+    window.scrollTo({
+      top: projectsPos - vh * 0.07,
+      behavior: 'smooth',
+    });
+  };
+
+  useEffect(() => {
     const handleScroll = () => {
       if (pathRef.current && maskRef.current && wrapRef.current) {
         const thePath = pathRef.current;
@@ -27,12 +37,15 @@ export default function TheArrow() {
         const lengthAbout = 1620;
         const lengthProjects = 410;
 
-        let arrowRightElement = document.querySelector('.arrow-right .arrow-next-color');
+        let arrowRightElement = document.querySelector(
+          '.arrow-right .arrow-next-color'
+        );
         let lightBigElement = document.querySelector('.light-big');
         let lightSmallElement = document.querySelector('.light-small');
 
         if (dashoffset > lengthAbout) dashoffset = lengthAbout;
-        else if (dashoffset > 210 && dashoffset < 810) dashoffset = lengthProjects;
+        else if (dashoffset > 210 && dashoffset < 810)
+          dashoffset = lengthProjects;
         else if (dashoffset < 210) dashoffset += 200;
 
         if (arrowRightElement) {
@@ -55,7 +68,8 @@ export default function TheArrow() {
         }
 
         if (arrowHeadRef.current) {
-          arrowHeadRef.current.style.opacity = dashoffset === lengthAbout ? '1' : '0';
+          arrowHeadRef.current.style.opacity =
+            dashoffset === lengthAbout ? '1' : '0';
         }
 
         mask.style.strokeDashoffset = dashoffset;
@@ -74,7 +88,7 @@ export default function TheArrow() {
 
   return (
     <div id='wrap' ref={wrapRef}>
-    <svg
+      <svg
         id='svg'
         viewBox='0 0 370 1900'
         fill='none'
@@ -82,12 +96,11 @@ export default function TheArrow() {
       >
         <defs>
           <mask id='mask1'>
-          <use ref={maskRef} xlinkHref='#thePath' />
+            <use ref={maskRef} xlinkHref='#thePath' />
           </mask>
           <path
             id='thePath'
             ref={pathRef}
-
             d='M164.876 1C171.043 44.1667 143.139 77.3269 70.6388 108C-33.3612 152 9.13878 264 18.6388 353.5C24.4115 407.886 47.2145 492.854 132.814 534.054C239.814 585.554 319.217 442.842 244.639 343C200.901 284.446 45.9382 328.5 59.4382 474.5C70.2382 591.3 163.472 640.833 204.639 655C220.139 662 249.676 668.1 252.876 716.5C256.876 777 266.713 891.554 192.876
           932.5C172.139 944 38.8763 992 38.8763 1141.5C38.8763 1261.1 38.8763 1455
           38.8763
@@ -107,11 +120,11 @@ export default function TheArrow() {
         <path
           id='arrowHead'
           ref={arrowHeadRef}
-
           className='cool arrowHead'
           d='M0,-15L0,-12L23,0L0,12L0,15'
           // visibility='hidden'
           transform='translate(254, 713) rotate(90)'
+          onClick={() => handleNavClick()}
         />
       </svg>
     </div>

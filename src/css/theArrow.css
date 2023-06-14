@@ -41,6 +41,8 @@ marker {
 .arrowHead {
   fill: var(--yellow-main);
   transition: 0.3s ease-out;
+  /* position: relative; */
+  pointer-events: all;
 }
 
 #mask, #arrowHead {

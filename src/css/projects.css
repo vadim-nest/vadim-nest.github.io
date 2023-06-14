@@ -1,6 +1,6 @@
 #projects-part {
-  height: 100vh;
-  min-height: 700px;
+  height: 225vw;
+  /* min-height: 700px; */
 }
 
 .projects-header {
@@ -23,8 +23,8 @@
 .project-description {
   background-color: var(--darker-gray);
   border-radius: 10px;
-  height: 67.5vh;
-  min-height: 500px;
+  height: 146vw;
+  /* min-height: 500px; */
   width: 83vw;
   margin-left: auto;
   margin-right: 2%;
@@ -32,10 +32,11 @@
   top: -200px;
   display: flex;
   flex-direction: column;
+  margin-top: 9vh;
 }
 
 .project-description h1 {
-  padding-top: 55%;
+  padding-top: 40%;
   padding-left: 5%;
   margin-bottom: 0px;
 }
@@ -170,9 +171,140 @@
 
 }
 
-.arrow-next-color {
-}
-
 .animate__animated.animate__fadeInDown {
   --animate-duration: 500ms;
+}
+/*
+@media (min-width: 280px) and (max-width: 310px)  {
+  .project-description {
+    margin-top: 12vw;
+    height: 167vw;
+  }
+  .project-description h1 {
+    margin-top: 30vw;
+    font-size: 20px;
+  }
+
+  .project-description p {
+    font-size: 14px;
+  }
+
+  .bubble-img {
+    height: 15px;
+  }
+
+  .links {
+    margin: 10px 0px;
+  }
+
+  #arrows {
+    margin-top: 25vw
+  }
+}
+
+@media (min-width: 330px) and (max-width: 360px) {
+  .project-description {
+    height: 151vw;
+  }
+}
+
+@media (min-width: 360px) and (max-width: 390px) {
+  .project-description {
+    height: 149vw;
+  }
+} */
+
+/*  */
+
+@media (min-width: 280px) and (max-width: 319px) {
+  .project-description {
+    margin-top: 30vw;
+    height: 150vw;
+  }
+  .project-description h1 {
+    margin-top: 20vw;
+    font-size: 20px;
+  }
+
+  .project-description p {
+    font-size: 14px;
+  }
+
+  .bubble-img {
+    height: 15px;
+  }
+
+  .links {
+    margin: 10px 0px;
+  }
+
+  #arrows {
+    margin-top: 8vw
+  }
+}
+
+@media (min-width: 280px) and (max-width: 359px) {
+  .project-description {
+    margin-top: 30vw;
+    height: 150vw;
+  }
+  .project-description h1 {
+    margin-top: 20vw;
+    font-size: 20px;
+  }
+}
+
+@media (min-width: 320px) and (max-width: 359px) {
+  .project-description h1 {
+    margin-top: 15vw;
+    font-size: 28px;
+  }
+}
+
+@media (min-width: 310px) and (max-width: 325px) {
+  .project-description {
+    height: 147vw;
+  }
+}
+
+@media (min-width: 325px) and (max-width: 335px) {
+  .project-description {
+    height: 145vw;
+  }
+}
+
+@media (min-width: 335px) and (max-width: 350px) {
+  .project-description {
+    height: 143vw;
+  }
+}
+
+@media (min-width: 350px) and (max-width: 359px) {
+  .project-description {
+    height: 141vw;
+  }
+}
+
+@media (min-width: 360px) and (max-width: 389px) {
+  .project-description {
+    height: 148vw;
+  }
+}
+
+@media (min-width: 420px) and (max-width: 465px) {
+  .project-description {
+    height: 144vw;
+  }
+}
+
+@media (min-width: 465px) and (max-width: 490px) {
+  .project-description {
+    height: 142vw;
+  }
+}
+
+@media (min-width: 490px) and (max-width: 576px) {
+  .project-description {
+    height: 140vw;
+  }
 }

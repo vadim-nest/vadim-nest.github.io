@@ -1,12 +1,21 @@
-#navbar {
+nav {
   background-color: var(--cod-gray-lighter);
+  border-bottom: 1px solid var(--dark-gray);
+  width: 100vw;
   height: 7vh;
+  position: fixed;
+  z-index: 10;
+}
+
+#navbar {
+  max-width: 1000px;
+  height: 7vh;
+  margin-left: auto;
+  margin-right: auto;
+  background-color: var(--cod-gray-lighter);
   display: flex;
   justify-content: space-between;
-  position: fixed;
   width: 100vw;
-  border-bottom: 1px solid var(--dark-gray);
-  z-index: 10;
 }
 
 #logo {
@@ -21,11 +30,12 @@
   background-color: var(--cod-gray-lighter);
   color: var(--white);
   border: 3px solid var(--cod-gray-lighter);
-  /* border-bottom: 3px solid var(--yellow-main); */
   margin-right: 10px;
   margin-left: 0px;
   font-size: 18px;
   cursor: pointer;
+  font-family: 'Open Sans', sans-serif;
+  transition: all 0.2s ease;
 }
 
 .nav-button:hover {
@@ -37,6 +47,29 @@
   border-bottom: 3px solid var(--yellow-main);
 }
 
-.nav-button p {
+@media (min-width: 280px) and (max-width: 359px) {
+  #logo {
+    margin: auto 0px auto 10px;
+  }
+  .nav-button {
+    margin-right: 0px;
+    margin-left: 0px;
+    font-size: 16px;
+  }
+}
+
+@media (min-width: 460px) and (max-width: 576px) {
+  .nav-button {
+    margin-right: 20px;
+  }
+}
+
+@media (min-width: 1201px) {
+  .nav-button {
+    margin-right: 10px;
+    margin-left: 10px;
+    font-size: 18px;
+  }
+
 }
 

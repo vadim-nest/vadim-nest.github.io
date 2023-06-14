@@ -10,7 +10,6 @@ import lightBig from './assets/light-big.svg';
 import lightSmall from './assets/light-small.svg';
 
 function App() {
-  // const [count, setCount] = useState(0);
 
   return (
     <>

@@ -1,5 +1,6 @@
 #contact-part {
   height: 100vh;
+  width: 100vw;
 }
 
 .contact-form {
@@ -19,8 +20,8 @@
 .input-wrap textarea {
   color: var(--white);
   font-size: 18px;
-  padding: 10px;
-  width: 320px;
+  padding: 10px 0px 10px 10px;
+  margin-left: -5px;
   border: none;
   display: block;
 }
@@ -37,6 +38,8 @@
   left: 10px;
   top: 20px;
   transition: 300ms ease all;
+  position: absolute;
+  z-index: 5;
 }
 
 .contact-field {
@@ -49,6 +52,7 @@
 }
 
 .contact-field:focus {
+  position: relative;
   transition: ease-in 0.08s;
   box-shadow: 0 0px 1px var(--cod-gray-lighter),
     0 2px 1px var(--cod-gray-lighter), 1px 3px 0px var(--cod-gray-lighter),
@@ -99,18 +103,21 @@
   top: 0px;
   font-size: 12px;
   color: var(--yellow-main);
+
 }
 
 .input-wrap textarea:not(:placeholder-shown) ~ label {
   top: 0px;
   font-size: 12px;
   color: var(--yellow-main);
+
+
 }
 
 /* Remove outline from all inputs when they are focused */
-input:focus {
+/* input:focus {
   outline: none;
-}
+} */
 
 .contact-links {
   display: flex;

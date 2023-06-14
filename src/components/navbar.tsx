@@ -7,8 +7,14 @@ export default function Navbar() {
   let vh = window.innerHeight;
 
   const aboutPos = 0;
-  const projectsPos = vh;
-  const contactPos = vh * 2;
+  let projectsPos = vh;
+  let contactPos = vh * 2;
+
+  const handleResize = () => {
+    vh = window.innerHeight;
+    projectsPos = vh;
+    contactPos = vh * 2;
+  }
 
   const handleNavClick = (position: string) => {
     // ref.current.scrollIntoView({ behavior: 'smooth' });
@@ -53,36 +59,40 @@ export default function Navbar() {
   useEffect(() => {
     handleNavScroll();
     window.addEventListener('scroll', handleNavScroll);
+    window.addEventListener('resize', handleResize);
     // Cleanup on unmount
     return () => {
       window.removeEventListener('scroll', handleNavScroll);
+      window.removeEventListener('resize', handleResize);
     };
   }, []); // Empty dependency array to run only on mount and unmount
 
   return (
-    <nav id='navbar'>
-      <h2 id='logo' className='h-e-text'>
-        VG
-      </h2>
-      <div id='nav-buttons'>
-        <button
-          className='nav-button dis-text'
-          onClick={() => handleNavClick('about')}
-        >
-          About
-        </button>
-        <button
-          className='nav-button dis-text'
-          onClick={() => handleNavClick('projects')}
-        >
-          Projects
-        </button>
-        <button
-          className='nav-button dis-text'
-          onClick={() => handleNavClick('contact')}
-        >
-          Contact
-        </button>
+    <nav>
+      <div id='navbar'>
+        <h2 id='logo' className='h-e-text'>
+          VG
+        </h2>
+        <div id='nav-buttons'>
+          <button
+            className='nav-button dis-text'
+            onClick={() => handleNavClick('about')}
+          >
+            About
+          </button>
+          <button
+            className='nav-button dis-text'
+            onClick={() => handleNavClick('projects')}
+          >
+            Projects
+          </button>
+          <button
+            className='nav-button dis-text'
+            onClick={() => handleNavClick('contact')}
+          >
+            Contact
+          </button>
+        </div>
       </div>
     </nav>
   );

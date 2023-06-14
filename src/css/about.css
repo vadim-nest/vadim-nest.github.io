@@ -1,7 +1,6 @@
-
 #welcome-part {
-  min-height: 800px;
-  height: 100vh;
+  /* min-height: 800px; */
+  height: 207vw;
 }
 
 #about-text {
@@ -38,4 +37,75 @@
   margin-top: 7vh;
   width: 70vw;
   margin-left: 4%;
+}
+
+@media (min-width: 0px) and (max-width: 359px) {
+  #about-text {
+    padding-top: 50%;
+    margin-bottom: 10%;
+    font-size: 15px;
+  }
+
+  #about-text h2 {
+    font-size: 22px;
+  }
+}
+
+@media (min-width: 360px) and (max-width: 390px) {
+  #about-text {
+    padding-top: 50%;
+    margin-bottom: 10%;
+  }
+}
+
+@media (min-width: 391px) and (max-width: 460px) {
+  #about-text {
+    margin-bottom: 25%;
+  }
+}
+
+@media (min-width: 460px) and (max-width: 576px) {
+  #about-text {
+    margin-bottom: 30%;
+  }
+}
+
+/* Small laptops */
+@media (min-width: 901px) and (max-width: 1200px) {
+}
+
+/* Desktop monitors */
+/* @media (min-width: 1201px) { */
+@media (min-width: 901px) {
+  #welcome-part {
+    height: 80vh;
+    max-width: 1000px;
+    margin-left: 200px;
+    margin-right: 200px;
+    display: flex;
+    flex-direction: row-reverse;
+  }
+
+  #about-text {
+    padding-top: 30vh;
+    margin-bottom: 20%;
+    margin-left: 0px;
+    text-align: left;
+    white-space: initial;
+    max-width: 340px;
+  }
+
+  #about-text p {
+    width: 400px;
+  }
+
+  #face-img {
+    width: 400px;
+    margin: auto 100px auto 200px;
+  }
+
+  #face-img img {
+    width: 250px;
+  }
+
 }
