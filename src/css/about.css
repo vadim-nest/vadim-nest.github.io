@@ -108,4 +108,34 @@
     width: 250px;
   }
 
+  .about-buttons .submit-button {
+    width: fit-content;
+    padding: 0 30px;
+    border-width: 3.5px;
+    cursor: pointer;
+  }
+
+  .about-buttons .submit-button:hover {
+    border-radius: 7px;
+  }
+
+  .about-buttons .nav-button {
+    opacity: 0.87;
+    margin-left: 40px;
+  }
+
+  .about-buttons .nav-button:after {
+    content: '';
+    display: block;
+    margin: auto;
+    height: 3px;
+    width: 0px;
+    background: transparent;
+    transition: width 0.3s ease, background-color 0.3s ease;
+    margin-top: 10px;
+  }
+  .about-buttons .nav-button:hover:after {
+    width: 100%;
+    background: var(--yellow-main);
+  }
 }
