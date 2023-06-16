@@ -312,10 +312,12 @@
 /* @media (min-width: 1201px) { */
 @media (min-width: 901px) {
   #projects-part {
-    height: 100vh;
+    height: 80vh;
+    min-height: 900px;
     max-width: 1100px;
     margin-left: auto;
     margin-right: auto;
+
   }
 
   .projects-header {
@@ -323,18 +325,19 @@
     margin-top: 0px;
     margin-bottom: 50px;
     font-size: 32px;
+    /* overflow-x: hidden; */
   }
 
   .project-video-wrapper {
     margin-left: -400px;
-    width: 110vw;
-    transform: translateX(-10%);
+    width: 120vw;
+    transform: translateX(-13.5%);
   }
 
   .project-video {
     width: 800px;
     margin-right: 50vw;
-    visibility: hidden;
+    /* visibility: hidden; */
   }
 
   .project-description {
@@ -344,18 +347,30 @@
     margin-left: 150px;
     position: relative;
     top: -500px;
-    flex-direction: column;
+    flex-direction: row;
     margin-top: 9vh;
   }
 
+  .stack-bigscreen {
+    display: flex;
+    flex-wrap: wrap;
+    width: 60%;
+    margin-top: auto;
+  }
+
+  .project-info {
+    width: 300px;
+    margin-left: 50px;
+  }
+
   .project-description h1 {
-    padding-top: 40%;
+    padding-top: 60%;
     padding-left: 5%;
     margin-bottom: 0px;
   }
 
   .project-description p {
-    margin-top: 10px;
+    margin-top: 15px;
   }
 
   .description {
@@ -368,74 +383,16 @@
     margin-top: auto;
   }
 
-  .stack {
-    overflow-x: hidden;
-    width: 83vw;
-  }
-
-  #front-stack,
-  #back-stack {
-    /* display: flex; */
-  }
-
-  #front-stack {
-    margin-bottom: 10px;
-  }
-
-  #back-stack {
-    flex-direction: row-reverse;
-  }
-
-  .bubble {
-    width: fit-content;
-    height: fit-content;
-    padding: 3px 15px 3px 15px;
-    border-radius: 50px;
-    margin-left: 3px;
-    margin-right: 3px;
-    display: flex;
-    flex-direction: row;
-  }
-
-  .bubble-img {
-    height: 20px;
-    padding: 5px 10px 5px 0px;
-  }
-
   .bubble p {
     font-family: 'Montserrat', sans-serif;
     margin: auto 0px auto 0px;
     height: fit-content;
   }
 
-  .bubble-white {
-    background-color: var(--light-gray);
-  }
-
-  .bubble-black {
-    background-color: var(--very-dark);
-  }
-
-  .bubble-yellow {
-    background-color: var(--dark-yellow);
-  }
-
-  .gradient-left {
-    position: absolute;
-    height: 85px;
-  }
-
-  .gradient-right {
-    position: absolute;
-    height: 85px;
-    transform: rotate(180deg);
-    right: 0px;
-  }
-
   .links {
     display: flex;
     justify-content: space-around;
-    margin-top: 25px;
+    margin-top: 30%;
     margin-bottom: 20px;
   }
 
@@ -462,28 +419,62 @@
 
   #arrows {
     height: 30px;
-    position: relative;
-    top: -205px;
-    margin-top: 38px;
+    /* position:inherit; */
+    top: -305px;
+    margin-top: -130px;
+    margin-left: auto;
+    margin-right: 80px;
     display: flex;
-    justify-content: space-between;
-    align-items: flex-end;
+    /* justify-content: end; */
+    width: 200px;
   }
 
   .arrow-left {
-    margin-left: 10vw;
+    margin-left: 1vw;
     height: 25px;
   }
 
   .arrow-right {
     height: 25px;
     transform: rotate(180deg) scale(1.4);
-    margin-right: 14vw;
-    align-self: start;
-    transition: 2s ease-out;
+    margin-right: 1vw;
+    /* color: var(--yellow-main); */
   }
 
-  .animate__animated.animate__fadeInDown {
-    --animate-duration: 500ms;
+  .arrow-right :last-of-type {
+    fill: var(--yellow-main);
+    fill-opacity: 0.87;
   }
+
+  /* position dots in carousel */
+  .flickity-page-dots {
+    top: 790px;
+    left: 560px;
+    opacity: 0.87;
+  }
+  /* white circles */
+  .flickity-page-dots .dot {
+    width: 20px;
+    height: 20px;
+    opacity: 1;
+    background: red;
+    /* border: 2px solid var(--yellow-main); */
+    transform: scale(1.3);
+    margin: 10px;
+    transition: all 0.2s ease;
+  }
+  /* fill-in selected dot */
+  .flickity-page-dots .dot.is-selected {
+    background: var(--yellow-main);
+    transform: scale(1.6);
+  }
+
+  /* .arrow-right:last-of-type::before {
+    content: 'Next';
+    color: white;
+    display: flex;
+    width: 15px;
+    height: 15px;
+    margin-right: 5px;
+  } */
 }

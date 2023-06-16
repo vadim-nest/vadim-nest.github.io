@@ -62,70 +62,90 @@ export default function Contact() {
   return (
     <div id='contact-part'>
       <h1>Contact me</h1>
-      <form className='contact-form' onSubmit={submit}>
-        <div className='input-wrap'>
-          <input
-            required
-            ref={name}
-            className='contact-field'
-            type='text'
-            placeholder=' '
-          />
-          <label>Name *</label>
-        </div>
-        <div className='input-wrap'>
-          <input
-            required
-            ref={email}
-            className='contact-field'
-            type='text'
-            placeholder=' '
-          />
-          <label>Email *</label>
-        </div>
-        <div className='input-wrap'>
-          <input
-            ref={phone}
-            className='contact-field'
-            type='text'
-            placeholder=' '
-          />
-          <label>Phone</label>
-        </div>
-        <div className='input-wrap'>
-          <input
-            ref={company}
-            className='contact-field'
-            type='text'
-            placeholder=' '
-          />
-          <label>Company</label>
-        </div>
-        <div className='input-wrap'>
-          <textarea
-            required
-            ref={message}
-            className='contact-field message-field'
-            placeholder=' '
-          ></textarea>
-          <label>Message *</label>
-        </div>
+      <div className='contact-wrap'>
+        <form className='contact-form' onSubmit={submit}>
+          <div className='input-wrap'>
+            <input
+              required
+              ref={name}
+              className='contact-field'
+              type='text'
+              placeholder=' '
+            />
+            <label>Name *</label>
+          </div>
+          <div className='input-wrap'>
+            <input
+              required
+              ref={email}
+              className='contact-field'
+              type='text'
+              placeholder=' '
+            />
+            <label>Email *</label>
+          </div>
+          <div className='input-wrap'>
+            <input
+              ref={phone}
+              className='contact-field'
+              type='text'
+              placeholder=' '
+            />
+            <label>Phone</label>
+          </div>
+          <div className='input-wrap'>
+            <input
+              ref={company}
+              className='contact-field'
+              type='text'
+              placeholder=' '
+            />
+            <label>Company</label>
+          </div>
+          <div className='input-wrap'>
+            <textarea
+              required
+              ref={message}
+              className='contact-field message-field'
+              placeholder=' '
+            ></textarea>
+            <label>Message *</label>
+          </div>
 
-        <input className='submit-button' type='submit' value='Send message' />
-      </form>
-      <div className='contact-links'>
-        <div className='github-div'>
-          <a href='https://github.com/vadim-nest' target='_blank'>
-            <GithubIcon />
-          </a>
-        </div>
-        <div className='linkedin-div'>
-          <a href='https://www.linkedin.com/in/vadim-nest/' target='_blank'>
-            <LinkedInIcon />
-          </a>
-        </div>
-        <div className='email-div'>
-          <a href="mailto:vadim@gne.me.uk" className="mail-icon">@</a>
+          <input className='submit-button' type='submit' value='Send message' />
+        </form>
+        <div className='contact-text'>
+          <p>
+            Interested in collaborating with me?
+          </p>
+          <p>
+            I'm always open to discussing
+            product design work or partnership opportunities. (come up with new
+            text)
+          </p>
+          <div className='contact-buttons'>
+            <a href='mailto:vadim@gne.me.uk' className='nav-button'>
+              vadim@gne.me.uk
+            </a>
+            <button className='nav-button'>CV (pdf)</button>
+          </div>
+          <div className='contact-links'>
+            <div className='github-div'>
+              <a href='https://github.com/vadim-nest' target='_blank'>
+                <GithubIcon />
+              </a>
+            </div>
+            <div className='linkedin-div'>
+              <a href='https://www.linkedin.com/in/vadim-nest/' target='_blank'>
+                <LinkedInIcon />
+              </a>
+            </div>
+            <div className='email-div'>
+              <a href='mailto:vadim@gne.me.uk' className='mail-icon'>
+                @
+              </a>
+            </div>
+          </div>
         </div>
       </div>
     </div>

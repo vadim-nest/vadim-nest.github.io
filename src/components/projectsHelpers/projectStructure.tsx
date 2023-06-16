@@ -1,6 +1,6 @@
-import imports from "./imports";
-import { Project } from "../../types/myTypes";
-import Carousel from "./carousel";
+import imports from './imports';
+import { Project } from '../../types/myTypes';
+import Carousel from './carousel';
 import { useMediaQuery } from 'react-responsive';
 
 function computeClass(index: number, classes: string[]): string {
@@ -32,71 +32,68 @@ function projectStructure(project: Project, key: number) {
   return (
     <div className='project-description' key={key}>
       {isDesktop && (
-        <>
-          {/* <div id='front-stack' className='stack'> */}
-
-              {project.frontStack.map((stack: string, index: number) => (
-                <div
-                  className={`bubble ${computeClass(index, frontClasses)}`}
-                >
-                  <img className='bubble-img' src={imports.logoMap[stack]} />
-                  <p>{stack}</p>
-                </div>
-              ))}
-
-          {/* </div> */}
-
-        {/* <div id='back-stack' className='stack'> */}
-            {project.backStack.map((stack: string, index: number) => (
-              <div className={`bubble ${computeClass(index, backClasses)}`}>
-                <img className='bubble-img' src={imports.logoMap[stack]} />
-                <p>{stack}</p>
-              </div>
-            ))}
-        {/* </div> */}
-
-        <img className='gradient-left' src={imports.gradient} />
-        <img className='gradient-right' src={imports.gradient} />
-        </>)}
-      <h1 className='h-e-text animate__animated animate__fadeInDown'>
-        {project.name}
-      </h1>
-      <p className='description animate__animated animate__fadeInDown'>
-        {project.description}
-      </p>
-      <div id='all-stack' className='animate__animated animate__fadeInDown'>
-      {!isDesktop && (
-        <>
-          <div id='front-stack' className='stack'>
-            <Carousel>
-              {project.frontStack.map((stack: string, index: number) => (
-                <div
-                  className={`bubble ${computeClass(index, frontClasses)}`}
-                >
-                  <img className='bubble-img' src={imports.logoMap[stack]} />
-                  <p>{stack}</p>
-                </div>
-              ))}
-            </Carousel>
-          </div>
-
-        <div id='back-stack' className='stack'>
-          <Carousel speed={'slow'}>
-            {project.backStack.map((stack: string, index: number) => (
-              <div className={`bubble ${computeClass(index, backClasses)}`}>
-                <img className='bubble-img' src={imports.logoMap[stack]} />
-                <p>{stack}</p>
-              </div>
-            ))}
-          </Carousel>
+        <div className='stack-bigscreen animate__animated animate__fadeInDown'>
+          {project.frontStack.map((stack: string, index: number) => (
+            <div className={`bubble ${computeClass(index, frontClasses)}`}>
+              <img className='bubble-img' src={imports.logoMap[stack]} />
+              <p>{stack}</p>
+            </div>
+          ))}
+          {project.backStack.map((stack: string, index: number) => (
+            <div className={`bubble ${computeClass(index, backClasses)}`}>
+              <img className='bubble-img' src={imports.logoMap[stack]} />
+              <p>{stack}</p>
+            </div>
+          ))}
         </div>
-
-        <img className='gradient-left' src={imports.gradient} />
-        <img className='gradient-right' src={imports.gradient} />
-        </>)}
+      )}
+      <div className='project-info'>
+        <h1 className='h-e-text animate__animated animate__fadeInDown'>
+          {project.name}
+        </h1>
+        <p className='description animate__animated animate__fadeInDown'>
+          {project.description}
+        </p>
+        {isDesktop && (
+          <div className='links animate__animated animate__fadeInDown'>
+            {projectLinks(project.links)}
+          </div>
+        )}
       </div>
-      <div className='links animate__animated animate__fadeInDown'>
-        {projectLinks(project.links)}
+      <div id='all-stack' className='animate__animated animate__fadeInDown'>
+        {!isDesktop && (
+          <>
+            <div id='front-stack' className='stack'>
+              <Carousel>
+                {project.frontStack.map((stack: string, index: number) => (
+                  <div
+                    className={`bubble ${computeClass(index, frontClasses)}`}
+                  >
+                    <img className='bubble-img' src={imports.logoMap[stack]} />
+                    <p>{stack}</p>
+                  </div>
+                ))}
+              </Carousel>
+            </div>
+
+            <div id='back-stack' className='stack'>
+              <Carousel speed={'slow'}>
+                {project.backStack.map((stack: string, index: number) => (
+                  <div className={`bubble ${computeClass(index, backClasses)}`}>
+                    <img className='bubble-img' src={imports.logoMap[stack]} />
+                    <p>{stack}</p>
+                  </div>
+                ))}
+              </Carousel>
+            </div>
+
+            <img className='gradient-left' src={imports.gradient} />
+            <img className='gradient-right' src={imports.gradient} />
+            <div className='links animate__animated animate__fadeInDown'>
+              {projectLinks(project.links)}
+            </div>
+          </>
+        )}
       </div>
     </div>
   );

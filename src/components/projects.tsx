@@ -20,6 +20,12 @@ export default function Projects() {
     pageDots: false
   };
 
+  const flickityOptionsDesktop = {
+    prevNextButtons: false,
+    wrapAround: true,
+    pageDots: true
+  };
+
   const [project, setProject] = useState(0);
 
   function nextProject() {
@@ -114,7 +120,7 @@ export default function Projects() {
     <div id='projects-part'>
       <h2 className='dis-text projects-header'>Recent projects</h2>
       <div className='project-video-wrapper'>
-        <Flickity
+        {!isDesktop &&         <Flickity
           flickityRef={(el) => {
             flickityRef.current = el;
             slideChange();
@@ -122,26 +128,51 @@ export default function Projects() {
           options={flickityOptions}
         >
           {projects.map((project) => {
-            console.log(project.videoSRC);
-
             return (
-              <video
-                autoPlay
-                muted
-                loop
-                controls
-                className='project-video'
-                onLoadedData={() => {
-                  flickityRef.current?.resize();
-                }}
-              >
-                <source src={project.videoSRC} type='video/mp4' />
-              </video>
-              // <img className='project-video' src={TempVid} alt="" />
+              // <video
+              //   autoPlay
+              //   muted
+              //   loop
+              //   controls
+              //   className='project-video'
+              //   onLoadedData={() => {
+              //     flickityRef.current?.resize();
+              //   }}
+              // >
+              //   <source src={project.videoSRC} type='video/mp4' />
+              // </video>
+              <img className='project-video' src={TempVid} alt="" />
 
             );
           })}
-        </Flickity>
+        </Flickity>}
+        {isDesktop && <Flickity
+          flickityRef={(el) => {
+            flickityRef.current = el;
+            slideChange();
+          }}
+          options={flickityOptionsDesktop}
+        >
+          {projects.map((project) => {
+            return (
+              // <video
+              //   autoPlay
+              //   muted
+              //   loop
+              //   controls
+              //   className='project-video'
+              //   onLoadedData={() => {
+              //     flickityRef.current?.resize();
+              //   }}
+              // >
+              //   <source src={project.videoSRC} type='video/mp4' />
+              // </video>
+              <img className='project-video' src={TempVid} alt="" />
+
+            );
+          })}
+        </Flickity>}
+
       </div>
       <div
         onTouchStart={handleTouchStart}
