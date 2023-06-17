@@ -15,7 +15,11 @@ import { ReactComponent as LinkedInIcon } from '../assets/linkedin.svg';
 // TODO: Handle errors
 // TODO: Improve the design?
 
+import { useMediaQuery } from 'react-responsive';
+
+
 export default function Contact() {
+  const isDesktop = useMediaQuery({ minWidth: 901 });
   const name = useRef<HTMLInputElement>(null);
   const email = useRef<HTMLInputElement>(null);
   const phone = useRef<HTMLInputElement>(null);
@@ -114,14 +118,13 @@ export default function Contact() {
 
           <input className='submit-button' type='submit' value='Send message' />
         </form>
-        <div className='contact-text'>
+        {isDesktop && (<div className='contact-text'>
           <p>
             Interested in collaborating with me?
           </p>
           <p>
             I'm always open to discussing
-            product design work or partnership opportunities. (come up with new
-            text)
+            product design work or partnership opportunities.
           </p>
           <div className='contact-buttons'>
             <a href='mailto:vadim@gne.me.uk' className='nav-button'>
@@ -146,7 +149,8 @@ export default function Contact() {
               </a>
             </div>
           </div>
-        </div>
+        </div>)}
+
       </div>
     </div>
   );

@@ -1,7 +1,7 @@
 import '../css/theArrow.css';
 import React, { useEffect, useRef } from 'react';
 
-export default function TheArrow() {
+export default function TheArrowDesktop() {
   const pathRef = useRef(null);
   const maskRef = useRef(null);
   const wrapRef = useRef(null);
@@ -13,7 +13,7 @@ export default function TheArrow() {
   const handleNavClick = () => {
     console.log('click');
     window.scrollTo({
-      top: projectsPos - vh * 0.07,
+      top: projectsPos - vh * 0.3,
       behavior: 'smooth',
     });
   };
@@ -34,28 +34,35 @@ export default function TheArrow() {
         let dashoffset = l - (window.scrollY * l) / totalScrollableHeight;
 
         // update dashoffset based on different conditions
-        const lengthAbout = 1620;
-        const lengthProjects = 410;
+        const lengthAbout = 3950;
+        const lengthProjects = 1700;
 
-        let arrowRightElement = document.querySelector(
-          '.arrow-right .arrow-next-color'
-        );
+        // let arrowRightElement = document.querySelector(
+        //   '.arrow-right .arrow-next-color'
+        // );
         let lightBigElement = document.querySelector('.light-big');
         let lightSmallElement = document.querySelector('.light-small');
 
-        if (dashoffset > lengthAbout) dashoffset = lengthAbout;
-        else if (dashoffset > 210 && dashoffset < 810)
+        if (dashoffset > lengthAbout) {
+          dashoffset = lengthAbout;
+        } else if (dashoffset > 400 && dashoffset < 2300) {
           dashoffset = lengthProjects;
-        else if (dashoffset < 210) dashoffset += 200;
-
-        if (arrowRightElement) {
-          if (dashoffset === lengthProjects) {
-            arrowRightElement.style.fill = 'var(--yellow-main)';
-            arrowRightElement.style.fillOpacity = '1';
-          } else {
-            arrowRightElement.style.fill = 'var(--light-gray)';
-          }
+        } else if (dashoffset < 400) {
+          dashoffset += 1000;
         }
+
+        if (dashoffset < 0) dashoffset = 0;
+
+        // dashoffset = lengthProjects;
+
+        // if (arrowRightElement) {
+        //   if (dashoffset === lengthProjects) {
+        //     arrowRightElement.style.fill = 'var(--yellow-main)';
+        //     arrowRightElement.style.fillOpacity = '1';
+        //   } else {
+        //     arrowRightElement.style.fill = 'var(--light-gray)';
+        //   }
+        // }
 
         if (lightBigElement && lightSmallElement) {
           if (dashoffset < 10) {
@@ -86,11 +93,13 @@ export default function TheArrow() {
     };
   }, []);
 
+
+
   return (
     <div id='wrap' ref={wrapRef}>
       <svg
         id='svg-arrow'
-        viewBox='0 0 370 1900'
+        viewBox='0 0 1287 2414'
         fill='none'
         preserveAspectRatio='xMidYMax meet'
       >
@@ -101,10 +110,7 @@ export default function TheArrow() {
           <path
             id='thePath'
             ref={pathRef}
-            d='M164.876 1C171.043 44.1667 143.139 77.3269 70.6388 108C-33.3612 152 9.13878 264 18.6388 353.5C24.4115 407.886 47.2145 492.854 132.814 534.054C239.814 585.554 319.217 442.842 244.639 343C200.901 284.446 45.9382 328.5 59.4382 474.5C70.2382 591.3 163.472 640.833 204.639 655C220.139 662 249.676 668.1 252.876 716.5C256.876 777 266.713 891.554 192.876
-          932.5C172.139 944 38.8763 992 38.8763 1141.5C38.8763 1261.1 38.8763 1455
-          38.8763
-          1537C38.8763 1540 43.4388 1544 50.6388 1544C57.8388 1544 178.876 1544 238.876 1544C254.376 1543.5 285.376 1547.5 285.376 1559.5C285.376 1574.5 290.876 1596 336.876 1596C382.876 1596 338.133 1641.82 353.876 1709C383.639 1836 371.639 1853.26 230.139 1853.26'
+            d='M947.5 0.5C914.892 313.498 277 118.5 187 291.5C97.0009 464.5 195.001 549.5 319 518C443 486.5 404 323.212 356 280.5C308 237.788 182.5 256 147 343C111.5 430 151.216 516.313 248.5 637C345.784 757.687 657.012 629.226 723 718C788.988 806.774 754.5 1287 586.5 1330.5C287.341 1407.96 215.5 1462.5 215.5 1592.5C215.5 1722.5 215.5 1849 215.5 1864C215.5 1879 220.5 1879 234 1879C247.501 1879 921.002 1879 1148.5 1879C1376 1879 1263.5 2085 1192 2248C1120.5 2411 331 2411 331 2411H0'
             stroke='#FFCC00'
             strokeWidth='6'
             // markerEnd='url(#arrow)'
@@ -113,7 +119,7 @@ export default function TheArrow() {
         <use
           id='maskedPath'
           xlinkHref='#thePath'
-          strokeDasharray='10 6'
+          strokeDasharray='12 8'
           mask='url(#mask1)'
           // strokeLinecap="round"
         />
@@ -123,7 +129,7 @@ export default function TheArrow() {
           className='cool arrowHead'
           d='M0,-15L0,-12L23,0L0,12L0,15'
           // visibility='hidden'
-          transform='translate(254, 713) rotate(90)'
+          transform='translate(754, 850) rotate(90) scale(1.4)'
           onClick={() => handleNavClick()}
         />
       </svg>

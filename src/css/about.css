@@ -1,6 +1,6 @@
 #welcome-part {
   /* min-height: 800px; */
-  height: 207vw;
+  height: 200vw;
 }
 
 #about-text {
@@ -60,7 +60,7 @@
 
 @media (min-width: 391px) and (max-width: 460px) {
   #about-text {
-    margin-bottom: 25%;
+    /* margin-bottom: 25%; */
   }
 }
 
@@ -78,16 +78,18 @@
 /* @media (min-width: 1201px) { */
 @media (min-width: 901px) {
   #welcome-part {
-    height: 80vh;
+    /* height: 82vh; */
+    height: 920px;
     max-width: 1000px;
-    margin-left: 200px;
-    margin-right: 200px;
+    margin-left: auto;
+    margin-right: auto;
     display: flex;
     flex-direction: row-reverse;
   }
 
   #about-text {
     padding-top: 30vh;
+    padding-top: 335px;
     margin-bottom: 20%;
     margin-left: 0px;
     text-align: left;
@@ -101,11 +103,11 @@
 
   #face-img {
     width: 400px;
-    margin: auto 100px auto 200px;
+    margin: 31.5% auto auto 65px;
   }
 
   #face-img img {
-    width: 250px;
+    width: 220px;
   }
 
 

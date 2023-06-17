@@ -65,6 +65,13 @@ nav {
 }
 
 @media (min-width: 1201px) {
+  nav {
+    height: 78px;
+  }
+  #navbar {
+    height: 78px;
+    /* height: 7vh; */
+  }
   .nav-button {
     margin-right: 10px;
     margin-left: 10px;
