@@ -7,16 +7,16 @@ export default function TheArrow() {
   const wrapRef = useRef(null);
   const arrowHeadRef = useRef(null);
 
-  let vh = window.innerHeight;
-  const projectsPos = vh;
+  // let vh = window.innerHeight;
+  // const projectsPos = vh;
 
-  const handleNavClick = () => {
-    console.log('click');
-    window.scrollTo({
-      top: projectsPos - vh * 0.07,
-      behavior: 'smooth',
-    });
-  };
+  // const handleNavClick = () => {
+  //   console.log('click');
+  //   window.scrollTo({
+  //     top: projectsPos - vh * 0.07,
+  //     behavior: 'smooth',
+  //   });
+  // };
 
   useEffect(() => {
     const handleScroll = () => {
@@ -124,7 +124,7 @@ export default function TheArrow() {
           d='M0,-15L0,-12L23,0L0,12L0,15'
           // visibility='hidden'
           transform='translate(254, 713) rotate(90)'
-          onClick={() => handleNavClick()}
+          onClick={() => document.getElementById('projects-part')?.scrollIntoView({behavior: 'smooth'})}
         />
       </svg>
     </div>

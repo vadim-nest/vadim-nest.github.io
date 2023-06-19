@@ -1,6 +1,6 @@
 #the-arrow {
   /* position: absolute; */
-  top: 7vh;
+  top: 0px;
   /* left: 5%; */
   width: 90vw;
   /* transition: stroke-dashoffset 2s ease-out; */
@@ -15,9 +15,9 @@ svg {
 #wrap {
   height: 100vh;
   position: absolute;
-  top: 7vh;
-  left: 5%;
-  width: 90vw;
+  top: 0;
+  left: 6%;
+  width: 85vw;
   pointer-events: none;
 }
 
