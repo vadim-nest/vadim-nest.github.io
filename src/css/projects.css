@@ -379,10 +379,30 @@
     padding-left: 5%;
   }
 
-  #all-stack {
+  .stack-bigscreen {
+    height: 30%;
+    margin-left: 20px;
+    margin-right: -20px;
+  }
+
+  .stack-bigscreen:hover {
+  }
+
+  .stack-bigscreen div {
     display: flex;
-    flex-direction: column;
-    margin-top: auto;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: start;
+  }
+
+  .bubble {
+    cursor: pointer;
+  }
+
+  .bubble:hover {
+    transition: all 0.3s ease;
+    transform: scale(1.05);
+
   }
 
   .bubble p {
@@ -496,11 +516,8 @@
     width: 1130px;
   }
 
-  path {
-    stroke-width: 6px;
-  }
 }
-/* 
+/*
 @media (min-width: 1000px) and (max-width: 1100px) {
 }
 
@@ -557,6 +574,40 @@
 
 @media (min-width: 1650px) and (max-width: 1690px) {
 } */
+
+/* 1707 × 841 */
+
+@media screen and (min-width: 901px) and (min-height: 800px) and (max-height: 1000px) {
+  .project-video-wrapper {
+    margin-left: -400px;
+    transform: translateX(-10%);
+  }
+  .project-video {
+    margin-top: 70px;
+    overflow: hidden;
+    width: 700px;
+    margin-right: 50vw;
+  }
+
+  .project-description {
+    height: 570px;
+    min-height: 500px;
+    width: 950px;
+    margin-left: 160px;
+    position: relative;
+    top: -477px;
+    flex-direction: row;
+    margin-top: 9vh;
+    margin-top: 100px;
+  }
+  .stack-bigscreen {
+    margin-bottom: 10px;
+  }
+  .flickity-page-dots {
+    top: 765px;
+    left: 500px;
+  }
+}
 
 @media (min-width: 1690px) and (max-width: 1740px) {
   .project-video-wrapper {

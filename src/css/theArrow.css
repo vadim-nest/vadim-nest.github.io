@@ -25,7 +25,7 @@ svg {
   /* width: 100%; */
 }
 
-path {
+#thePath {
   stroke-width: 4px;
 }
 
@@ -67,7 +67,7 @@ marker {
     width: 1130px;
   }
 
-  path {
+  #thePath {
     stroke-width: 6px;
   }
 }
@@ -214,3 +214,18 @@ marker {
     left: 31.2%;
   }
 }
+
+@media screen and (min-width: 901px)  and (min-height: 800px) and (max-height: 1000px) {
+  #wrap {
+    /* position: absolute; */
+    top: 40px;
+    /* left: 5%; */
+    /* width: 85vw; */
+  }
+
+  #svg-arrow {
+    /* width: 1100px; */
+  }
+
+}
+
