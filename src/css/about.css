@@ -76,20 +76,20 @@
 
 @media (min-width: 0px) and (max-width: 359px) {
   #about-text {
-    padding-top: 50%;
-    margin-bottom: 10%;
-    font-size: 15px;
+    /* padding-top: 50%; */
+    /* margin-bottom: 10%; */
+    /* font-size: 15px; */
   }
 
   #about-text h2 {
-    font-size: 22px;
+    /* font-size: 22px; */
   }
 }
 
 @media (min-width: 360px) and (max-width: 390px) {
   #about-text {
-    padding-top: 50%;
-    margin-bottom: 10%;
+    /* padding-top: 50%; */
+    /* margin-bottom: 10%; */
   }
 }
 
@@ -101,7 +101,7 @@
 
 @media (min-width: 460px) and (max-width: 576px) {
   #about-text {
-    margin-bottom: 30%;
+    /* margin-bottom: 30%; */
   }
 }
 
