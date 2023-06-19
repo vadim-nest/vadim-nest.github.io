@@ -6,7 +6,9 @@
   "scripts": {
     "dev": "vite",
     "build": "tsc && vite build",
-    "preview": "vite preview"
+    "preview": "vite preview",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d dist"
   },
   "devDependencies": {
     "@types/flickity": "^2.2.7",
@@ -15,6 +17,7 @@
     "@types/video-react": "^0.15.1",
     "@vitejs/plugin-react": "^2.2.0",
     "cz-conventional-changelog": "^3.3.0",
+    "gh-pages": "^5.0.0",
     "react-parallax-hover": "^2.0.2",
     "react-responsive": "^9.0.2",
     "react-spring": "^9.7.1",
@@ -39,5 +42,6 @@
     "commitizen": {
       "path": "./node_modules/cz-conventional-changelog"
     }
-  }
+  },
+  "homepage": "http://vadim-nest.github.io/vadim-nest.github.io"
 }

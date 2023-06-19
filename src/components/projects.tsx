@@ -136,7 +136,6 @@ export default function Projects() {
                 >
                   <source src={project.videoSRC} type='video/mp4' />
                 </video>
-                // <img className='project-video' src={TempVid} alt='' />
               );
             })}
           </Flickity>

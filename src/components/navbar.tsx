@@ -17,7 +17,10 @@ export default function Navbar() {
     } else if (position === 'projects') {
       document.getElementById('projects-part')?.scrollIntoView({behavior: 'smooth'});
     } else if (position === 'contact') {
-      document.getElementById('contact-part')?.scrollIntoView({behavior: 'smooth'});
+      window.scrollTo({
+        top: contactPos * 1.25,
+        behavior: "smooth"
+      });
     }
   };
 
@@ -33,10 +36,10 @@ export default function Navbar() {
       navButtons[0].className = 'nav-button current-view';
     } else if (
       scrollY + vh * 0.5 >= projectsPos &&
-      scrollY + vh * 0.5 < contactPos
+      scrollY + vh * 0.5 < contactPos * 1.25
     ) {
       navButtons[1].className = 'nav-button current-view';
-    } else if (scrollY + vh * 0.5 >= contactPos) {
+    } else if (scrollY + vh * 0.5 >= contactPos * 1.25) {
       navButtons[2].className = 'nav-button current-view';
     }
   };

@@ -24,6 +24,7 @@ nav {
 
 #nav-buttons {
   display: flex;
+  max-width: 65%;
 }
 
 .nav-button {

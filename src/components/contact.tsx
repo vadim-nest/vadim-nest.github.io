@@ -65,7 +65,7 @@ export default function Contact() {
 
   return (
     <div id='contact-part'>
-      <h1>Contact me</h1>
+      <h1 id='contach-header'>Contact me</h1>
       <div className='contact-wrap'>
         <form className='contact-form' onSubmit={submit}>
           <div className='input-wrap'>
