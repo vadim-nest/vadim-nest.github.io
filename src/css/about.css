@@ -22,10 +22,11 @@
 .about-buttons {
   display: flex;
   flex-direction: row-reverse;
+  justify-content: space-between;
   width: 80%;
   margin-left: auto;
   margin-top: 20px;
-  /* margin-right: auto; */
+  margin-right: auto;
 }
 
 .about-buttons .nav-button {
