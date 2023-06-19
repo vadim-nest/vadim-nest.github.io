@@ -8,8 +8,6 @@ import imports from './projectsHelpers/imports';
 import projects from './projectsHelpers/projectsContent';
 import projectStructure from './projectsHelpers/projectStructure';
 
-import TempVid from '../assets/TempVidMacbook.png';
-
 export default function Projects() {
   const isDesktop = useMediaQuery({ minWidth: 901 });
   const flickityRef = useRef<Flickity | null>(null);
@@ -17,13 +15,8 @@ export default function Projects() {
   const flickityOptions = {
     prevNextButtons: false,
     wrapAround: true,
-    pageDots: false,
-  };
-
-  const flickityOptionsDesktop = {
-    prevNextButtons: false,
-    wrapAround: true,
     pageDots: true,
+    lazyLoad: true
   };
 
   const [project, setProject] = useState(0);
@@ -130,19 +123,20 @@ export default function Projects() {
           >
             {projects.map((project) => {
               return (
-                // <video
-                //   autoPlay
-                //   muted
-                //   loop
-                //   controls
-                //   className='project-video'
-                //   onLoadedData={() => {
-                //     flickityRef.current?.resize();
-                //   }}
-                // >
-                //   <source src={project.videoSRC} type='video/mp4' />
-                // </video>
-                <img className='project-video' src={TempVid} alt='' />
+                <video
+                  autoPlay
+                  muted
+                  loop
+                  controls
+                  className='project-video'
+                  onLoadedData={() => {
+                    flickityRef.current?.resize();
+                  }}
+                  data-flickity-lazyload
+                >
+                  <source src={project.videoSRC} type='video/mp4' />
+                </video>
+                // <img className='project-video' src={TempVid} alt='' />
               );
             })}
           </Flickity>
@@ -153,23 +147,23 @@ export default function Projects() {
               flickityRef.current = el;
               slideChange();
             }}
-            options={flickityOptionsDesktop}
+            options={flickityOptions}
           >
             {projects.map((project) => {
               return (
-                // <video
-                //   autoPlay
-                //   muted
-                //   loop
-                //   controls
-                //   className='project-video'
-                //   onLoadedData={() => {
-                //     flickityRef.current?.resize();
-                //   }}
-                // >
-                //   <source src={project.videoSRC} type='video/mp4' />
-                // </video>
-                <img className='project-video' src={TempVid} alt='' />
+                <video
+                  autoPlay
+                  muted
+                  loop
+                  controls
+                  className='project-video'
+                  onLoadedData={() => {
+                    flickityRef.current?.resize();
+                  }}
+                >
+                  <source src={project.videoSRC} type='video/mp4' />
+                </video>
+                // <img className='project-video' src={TempVid} alt='' />
               );
             })}
           </Flickity>

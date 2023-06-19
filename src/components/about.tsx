@@ -13,8 +13,8 @@ export default function About() {
           I create intuitive, end-to-end products with seamless user experiences
         </p>
         {isDesktop && (<div className='about-buttons'>
-          <button className='submit-button'>Contact</button>
-          <button className='nav-button'>See projects</button>
+          <button className='submit-button' onClick={() => document.getElementById('contact-part')?.scrollIntoView({behavior: 'smooth'})}>Contact</button>
+          <button className='nav-button' onClick={() => document.getElementById('projects-part')?.scrollIntoView({behavior: 'smooth'})}>See projects</button>
         </div>)}
       </div>
       <div id='face-img'>

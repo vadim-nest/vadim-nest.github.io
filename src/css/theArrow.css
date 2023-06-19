@@ -215,6 +215,12 @@ marker {
   }
 }
 
+@media (min-width: 3500px) and (max-width: 4000px) {
+  #wrap {
+    left: 35%;
+  }
+}
+
 @media screen and (min-width: 901px)  and (min-height: 800px) and (max-height: 1000px) {
   #wrap {
     /* position: absolute; */

@@ -130,7 +130,7 @@ export default function Contact() {
             <a href='mailto:vadim@gne.me.uk' className='nav-button'>
               vadim@gne.me.uk
             </a>
-            <button className='nav-button'>CV (pdf)</button>
+            <a href="../src/assets/VADIM-GNEZDYSHKIN-2023.pdf" className='nav-button' download="VADIM-GNEZDYSHKIN-2023.pdf">CV (pdf)</a>
           </div>
           <div className='contact-links'>
             <div className='github-div'>

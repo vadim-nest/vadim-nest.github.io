@@ -1,5 +1,6 @@
-import videoTest from '../../assets/projects-videos/video1809203057.mp4'; // TODO: Replace with proper videos
 import amazethingVideo from '../../assets/projects-videos/Amazething-720p.mp4';
+import newsbuzzVideo from '../../assets/projects-videos/Newsbuzz-720p.mp4';
+import atypicalVideo from '../../assets/projects-videos/Atypeical-720p.mp4';
 import { Project } from '../../types/myTypes';
 
 const projects: Project[] = [
@@ -38,7 +39,7 @@ const projects: Project[] = [
       'Stay up-to-date on local news by browsing through trending hashtags and clicking on them to read more.',
     frontStack: ['JavaScript', 'React', 'CSS', 'Mapbox API', 'Figma'],
     backStack: ['Node.js', 'Axios', 'Express.js', 'PostgreSQL', 'Sequelize'],
-    videoSRC: videoTest,
+    videoSRC: newsbuzzVideo,
     links: {
       github: 'https://github.com/vadim-nest/Newsbuzz',
     },
@@ -64,7 +65,7 @@ const projects: Project[] = [
       'Jest',
       'Passport.js',
     ],
-    videoSRC: videoTest,
+    videoSRC: atypicalVideo,
     links: {
       github: 'https://github.com/majilaii/aTypeical',
       website: 'https://atypeical.netlify.app/',

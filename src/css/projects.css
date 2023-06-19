@@ -170,9 +170,19 @@
   transition: 2s ease-out;
 }
 
+.arrow-left:hover,
+.arrow-right:hover {
+  cursor: pointer;
+}
+
 .animate__animated.animate__fadeInDown {
   --animate-duration: 500ms;
 }
+
+.flickity-page-dots {
+  visibility: hidden;
+}
+
 /*
 @media (min-width: 280px) and (max-width: 310px)  {
   .project-description {
@@ -377,6 +387,7 @@
 
   .description {
     padding-left: 5%;
+    height: 150px;
   }
 
   .stack-bigscreen {
@@ -400,7 +411,7 @@
   }
 
   .bubble:hover {
-    transition: all 0.3s ease;
+    transition: all 0.2s ease;
     transform: scale(1.05);
 
   }
@@ -471,7 +482,8 @@
 
   /* position dots in carousel */
   .flickity-page-dots {
-    top: 790px;
+    visibility: visible;
+    top: 795px;
     left: 560px;
     opacity: 0.87;
   }
@@ -578,6 +590,12 @@
 /* 1707 × 841 */
 
 @media screen and (min-width: 901px) and (min-height: 800px) and (max-height: 1000px) {
+  .projects-header {
+    margin-left: -50px;
+    margin-top: 50px;
+    margin-bottom: 0px;
+    /* overflow-x: hidden; */
+  }
   .project-video-wrapper {
     margin-left: -400px;
     transform: translateX(-10%);
@@ -604,7 +622,7 @@
     margin-bottom: 10px;
   }
   .flickity-page-dots {
-    top: 765px;
+    top: 770px;
     left: 500px;
   }
 }
@@ -633,5 +651,11 @@
 @media (min-width: 3000px) and (max-width: 3200px) {
   .project-video-wrapper {
     margin-left: -990px;
+  }
+}
+
+@media (min-width: 3500px) and (max-width: 4000px) {
+  .project-video-wrapper {
+    margin-left: -1320px;
   }
 }

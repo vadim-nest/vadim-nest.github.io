@@ -1,4 +1,4 @@
-import React, { useRef, useEffect } from 'react';
+import { useEffect } from 'react';
 import '../css/navbar.css';
 
 // TODO: instead of vh, need to actually calculate the position of elements (using refs)
@@ -10,29 +10,14 @@ export default function Navbar() {
   let projectsPos = vh;
   let contactPos = vh * 2;
 
-  const handleResize = () => {
-    vh = window.innerHeight;
-    projectsPos = vh;
-    contactPos = vh * 2;
-  }
-
   const handleNavClick = (position: string) => {
     // ref.current.scrollIntoView({ behavior: 'smooth' });
     if (position === 'about') {
-      window.scrollTo({
-        top: aboutPos,
-        behavior: 'smooth',
-      });
+      document.getElementById('welcome-part')?.scrollIntoView({behavior: 'smooth'});
     } else if (position === 'projects') {
-      window.scrollTo({
-        top: projectsPos - (vh * 0.07),
-        behavior: 'smooth',
-      });
+      document.getElementById('projects-part')?.scrollIntoView({behavior: 'smooth'});
     } else if (position === 'contact') {
-      window.scrollTo({
-        top: contactPos,
-        behavior: 'smooth',
-      });
+      document.getElementById('contact-part')?.scrollIntoView({behavior: 'smooth'});
     }
   };
 
@@ -59,11 +44,9 @@ export default function Navbar() {
   useEffect(() => {
     handleNavScroll();
     window.addEventListener('scroll', handleNavScroll);
-    window.addEventListener('resize', handleResize);
     // Cleanup on unmount
     return () => {
       window.removeEventListener('scroll', handleNavScroll);
-      window.removeEventListener('resize', handleResize);
     };
   }, []); // Empty dependency array to run only on mount and unmount
 
