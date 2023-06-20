@@ -7,6 +7,8 @@
   padding-top: 25%;
   text-align: center;
   margin-bottom: 10%;
+  z-index: 2;
+  position: relative;
 }
 
 #about-text h2 {
@@ -33,6 +35,8 @@
   font-size: 16px;
   opacity: 0.87;
   margin: 0;
+  background-color: transparent;
+  border: none;
 }
 
 .about-buttons .submit-button {
@@ -41,6 +45,8 @@
   padding-left: 30px;
   padding-right: 30px;
   margin: 0;
+  background-color: transparent;
+  box-shadow: none;
 }
 
 .about-buttons .nav-button:after {
@@ -58,6 +64,67 @@
   background: var(--yellow-main);
 }
 
+.rounded-circle {
+  /* visibility: hidden; */
+  position: absolute;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  z-index: 0;
+}
+
+#shape-1, #shape-2, #shape-3 {
+  min-width: 300px;
+  height: 300px;
+  filter: blur(35px);
+}
+
+#shape-1 {
+  background-color: var(--yellow-main);
+  top: 300px;
+  left: 80px;
+  opacity: 0.3;
+}
+
+/* #shape-2 {
+  background-color: #fff;
+  right: 20px;
+} */
+
+#shape-3 {
+  background-color: var(--yellow-main);
+  left: 20px;
+  top: 250px;
+  opacity: 0.5;
+}
+
+.scale-up-center {
+  animation: scale-up-center 10s cubic-bezier(0.39, 0.575, 0.565, 1) infinite both;
+}
+
+.animation-delay-2000 {
+  animation-delay: 2s;
+}
+
+.animation-delay-4000 {
+  animation-delay: 4s;
+}
+
+@keyframes scale-up-center {
+  0% {
+    transform: translate(0px, 0px) scale(1);
+  }
+  33% {
+    transform: translate(30px, -50px) scale(1.1);
+  }
+  66% {
+    transform: translate(-20px, 20px) scale(0.9);
+  }
+  100% {
+    transform: translate(0px, 0px) scale(1);
+  }
+}
+
 #face-img {
   width: fit-content;
   margin-left: auto;
@@ -67,6 +134,8 @@
 #face-img img {
   width: 47vw;
   border-radius: 50%;
+  position: relative;
+  z-index: 1;
 }
 
 .the-arrow {
@@ -123,6 +192,7 @@
     margin-right: auto;
     display: flex;
     flex-direction: row-reverse;
+    position: relative;
   }
 
   #about-text {
@@ -145,6 +215,26 @@
 
   #face-img img {
     width: 220px;
+  }
+
+  #shape-1, #shape-2, #shape-3 {
+    min-width: 400px;
+    height: 400px;
+    filter: blur(35px);
+  }
+
+  #shape-1 {
+    background-color: var(--yellow-main);
+    top: 350px;
+    left: 140px;
+    opacity: 0.2;
+  }
+
+  #shape-3 {
+    background-color: var(--yellow-main);
+    left: 0px;
+    top: 300px;
+    opacity: 0.3;
   }
 
   /* .about-buttons {

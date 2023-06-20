@@ -40,8 +40,8 @@ export default function TheArrow() {
         let arrowRightElement = document.querySelector(
           '.arrow-right .arrow-next-color'
         );
-        let lightBigElement = document.querySelector('.light-big');
-        let lightSmallElement = document.querySelector('.light-small');
+        // let lightBigElement = document.querySelector('.light-big');
+        // let lightSmallElement = document.querySelector('.light-small');
         dashoffset = lengthAbout;
         // if (dashoffset > lengthAbout) dashoffset = lengthAbout;
         // else if (dashoffset > 210 && dashoffset < 810)
@@ -50,24 +50,24 @@ export default function TheArrow() {
 
         // if (dashoffset < 0) dashoffset = 0;
 
-        if (arrowRightElement) {
-          if (dashoffset === lengthProjects) {
-            arrowRightElement.style.fill = 'var(--yellow-main)';
-            arrowRightElement.style.fillOpacity = '1';
-          } else {
-            arrowRightElement.style.fill = 'var(--light-gray)';
-          }
-        }
+        // if (arrowRightElement) {
+        //   if (dashoffset === lengthProjects) {
+        //     arrowRightElement.style.fill = 'var(--yellow-main)';
+        //     arrowRightElement.style.fillOpacity = '1';
+        //   } else {
+        //     arrowRightElement.style.fill = 'var(--light-gray)';
+        //   }
+        // }
 
-        if (lightBigElement && lightSmallElement) {
-          if (dashoffset < 10) {
-            lightBigElement.style.visibility = 'visible';
-            lightSmallElement.style.visibility = 'visible';
-          } else {
-            lightBigElement.style.visibility = 'hidden';
-            lightSmallElement.style.visibility = 'hidden';
-          }
-        }
+        // if (lightBigElement && lightSmallElement) {
+        //   if (dashoffset < 10) {
+        //     lightBigElement.style.visibility = 'visible';
+        //     lightSmallElement.style.visibility = 'visible';
+        //   } else {
+        //     lightBigElement.style.visibility = 'hidden';
+        //     lightSmallElement.style.visibility = 'hidden';
+        //   }
+        // }
 
         if (arrowHeadRef.current) {
           arrowHeadRef.current.style.opacity =

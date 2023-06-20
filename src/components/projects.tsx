@@ -109,6 +109,12 @@ export default function Projects() {
     setSwipeHandled(false);
   };
 
+  const [controls, setControls] = useState(false);
+
+  const handleTap = () => {
+    setControls(true);
+  };
+
   return (
     <div id='projects-part'>
       <h2 className='dis-text projects-header'>Recent projects</h2>
@@ -124,11 +130,13 @@ export default function Projects() {
             {projects.map((project) => {
               return (
                 <video
+                  playsInline
                   autoPlay
                   muted
                   loop
-                  controls
+                  controls={controls}
                   className='project-video'
+                  onClick={handleTap}
                   onLoadedData={() => {
                     flickityRef.current?.resize();
                   }}

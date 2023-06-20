@@ -20,7 +20,6 @@ function App() {
         <About />
         <Projects />
         <Contact />
-        {isDesktop ? <TheArrowDesktop /> : <TheArrow /> }
       </div>
 
     </>

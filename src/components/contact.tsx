@@ -73,7 +73,6 @@ export default function Contact() {
               ref={name}
               className='contact-field'
               type='text'
-
               placeholder=' '
             />
             <label>Name *</label>
