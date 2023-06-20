@@ -48,9 +48,9 @@ function projectStructure(project: Project, key: number) {
         </div>
       )}
       <div className='project-info'>
-        <h1 className='h-e-text animate__animated animate__fadeInDown'>
+        <h2 className='h-e-text animate__animated animate__fadeInDown'>
           {project.name}
-        </h1>
+        </h2>
         <p className='description animate__animated animate__fadeInDown'>
           {project.description}
         </p>

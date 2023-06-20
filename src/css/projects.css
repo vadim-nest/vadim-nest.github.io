@@ -1,15 +1,17 @@
 #projects-part {
-  height: 225vw;
+  height: 207vw;
   /* min-height: 700px; */
 }
 
 .projects-header {
   margin-left: 5%;
+  margin-top: 100px;
 }
 
 .project-video-wrapper {
   /* width: 87vw; */
-  /* margin-left: 5%; */
+  margin-left: -7px;
+  margin-bottom: -100px;
   z-index: 4;
   position: relative;
 }
@@ -23,30 +25,35 @@
 .project-description {
   background-color: var(--darker-gray);
   border-radius: 10px;
-  height: 146vw;
+  height: 490px;
   /* min-height: 500px; */
-  width: 83vw;
+  width: 80vw;
   margin-left: auto;
-  margin-right: 2%;
+  margin-right: 10px;
   position: relative;
-  top: -200px;
+  top: -104px;
   display: flex;
   flex-direction: column;
   margin-top: 9vh;
+  z-index: 1;
+  border: 4px dashed var(--yellow-main);
 }
 
-.project-description h1 {
+.project-description h2 {
   padding-top: 40%;
   padding-left: 5%;
   margin-bottom: 0px;
+
 }
 
 .project-description p {
   margin-top: 10px;
+  margin-bottom: auto;
 }
 
 .description {
   padding-left: 5%;
+  padding-right: 5%;
 }
 
 #all-stack {
@@ -57,7 +64,8 @@
 
 .stack {
   overflow-x: hidden;
-  width: 83vw;
+  width: 80vw;
+  margin-bottom: 20px;
 }
 
 #front-stack,
@@ -76,7 +84,7 @@
 .bubble {
   width: fit-content;
   height: fit-content;
-  padding: 3px 15px 3px 15px;
+  padding: 3px 10px 3px 10px;
   border-radius: 50px;
   margin-left: 3px;
   margin-right: 3px;
@@ -86,11 +94,12 @@
 
 .bubble-img {
   height: 20px;
-  padding: 5px 10px 5px 0px;
+  padding: 2px 5px 2px 0px;
 }
 
 .bubble p {
   font-family: 'Montserrat', sans-serif;
+  font-size: 14px;
   margin: auto 0px auto 0px;
   height: fit-content;
 }
@@ -109,7 +118,7 @@
 
 .gradient-left {
   position: absolute;
-  height: 85px;
+  height: fit-content;
 }
 
 .gradient-right {
@@ -122,13 +131,15 @@
 .links {
   display: flex;
   justify-content: space-around;
-  margin-top: 25px;
-  margin-bottom: 20px;
+  /* margin-top: 50px; */
+  margin-bottom: 10px;
+  /* height: 25px; */
 }
 
 .github-link {
   fill: white;
   transition: fill 0.2s ease;
+  transform: scale(0.8);
 }
 
 .github-div:hover .github-link,
@@ -139,6 +150,7 @@
 
 .website-link {
   transition: all 0.2s ease;
+  transform: scale(0.8);
 }
 
 .website-div:hover .website-link,
@@ -150,7 +162,7 @@
 #arrows {
   height: 30px;
   position: relative;
-  top: -205px;
+  top: -115px;
   margin-top: 38px;
   display: flex;
   justify-content: space-between;
@@ -158,16 +170,21 @@
 }
 
 .arrow-left {
-  margin-left: 10vw;
+  margin-left: 18vw;
   height: 25px;
 }
 
 .arrow-right {
   height: 25px;
   transform: rotate(180deg) scale(1.4);
-  margin-right: 14vw;
+  margin-right: 18vw;
   align-self: start;
   transition: 2s ease-out;
+}
+
+.arrow-next-color{
+  fill: var(--yellow-main);
+  fill-opacity: 0.87;
 }
 
 .arrow-left:hover,
@@ -181,6 +198,25 @@
 
 .flickity-page-dots {
   visibility: hidden;
+  top: 610px;
+  /* left: 560px; */
+  opacity: 0.87;
+}
+/* white circles */
+.flickity-page-dots .dot {
+  width: 20px;
+  height: 20px;
+  opacity: 1;
+  background: red;
+  /* border: 2px solid var(--yellow-main); */
+  transform: scale(1.3);
+  margin: 10px;
+  transition: all 0.2s ease;
+}
+/* fill-in selected dot */
+.flickity-page-dots .dot.is-selected {
+  background: var(--yellow-main);
+  transform: scale(1.6);
 }
 
 /*
@@ -189,7 +225,7 @@
     margin-top: 12vw;
     height: 167vw;
   }
-  .project-description h1 {
+  .project-description h2 {
     margin-top: 30vw;
     font-size: 20px;
   }
@@ -225,98 +261,6 @@
 
 /*  */
 
-@media (min-width: 280px) and (max-width: 319px) {
-  .project-description {
-    margin-top: 30vw;
-    height: 150vw;
-  }
-  .project-description h1 {
-    margin-top: 20vw;
-    font-size: 20px;
-  }
-
-  .project-description p {
-    font-size: 14px;
-  }
-
-  .bubble-img {
-    height: 15px;
-  }
-
-  .links {
-    margin: 10px 0px;
-  }
-
-  #arrows {
-    margin-top: 8vw;
-  }
-}
-
-@media (min-width: 280px) and (max-width: 359px) {
-  .project-description {
-    margin-top: 30vw;
-    height: 150vw;
-  }
-  .project-description h1 {
-    margin-top: 20vw;
-    font-size: 20px;
-  }
-}
-
-@media (min-width: 320px) and (max-width: 359px) {
-  .project-description h1 {
-    margin-top: 15vw;
-    font-size: 28px;
-  }
-}
-
-@media (min-width: 310px) and (max-width: 325px) {
-  .project-description {
-    height: 147vw;
-  }
-}
-
-@media (min-width: 325px) and (max-width: 335px) {
-  .project-description {
-    height: 145vw;
-  }
-}
-
-@media (min-width: 335px) and (max-width: 350px) {
-  .project-description {
-    height: 143vw;
-  }
-}
-
-@media (min-width: 350px) and (max-width: 359px) {
-  .project-description {
-    height: 141vw;
-  }
-}
-
-@media (min-width: 360px) and (max-width: 389px) {
-  .project-description {
-    height: 148vw;
-  }
-}
-
-@media (min-width: 420px) and (max-width: 465px) {
-  .project-description {
-    height: 144vw;
-  }
-}
-
-@media (min-width: 465px) and (max-width: 490px) {
-  .project-description {
-    height: 142vw;
-  }
-}
-
-@media (min-width: 490px) and (max-width: 576px) {
-  .project-description {
-    height: 140vw;
-  }
-}
 
 /* Desktop monitors */
 /* @media (min-width: 1201px) { */
@@ -357,7 +301,7 @@
     width: 950px;
     margin-left: 156px;
     position: relative;
-    top: -500px;
+    top: -400px;
     flex-direction: row;
     /* margin-top: 9vh; */
     margin-top: 100px;
@@ -410,6 +354,28 @@
     cursor: pointer;
   }
 
+  .bubble {
+    width: fit-content;
+    height: fit-content;
+    padding: 3px 15px 3px 15px;
+    border-radius: 50px;
+    margin-left: 3px;
+    margin-right: 3px;
+    display: flex;
+    flex-direction: row;
+  }
+
+  .bubble-img {
+    height: 20px;
+    padding: 5px 10px 5px 0px;
+  }
+
+  .bubble p {
+    font-family: 'Montserrat', sans-serif;
+    margin: auto 0px auto 0px;
+    height: fit-content;
+  }
+
   .bubble:hover {
     transition: all 0.2s ease;
     transform: scale(1.05);
@@ -453,7 +419,7 @@
   #arrows {
     height: 30px;
     /* position:inherit; */
-    top: -302px;
+    top: -210px;
     margin-top: -130px;
     /* margin-left: -160px; */
     margin-left: auto;

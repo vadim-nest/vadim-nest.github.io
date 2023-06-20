@@ -42,14 +42,15 @@ export default function TheArrowDesktop() {
         // );
         let lightBigElement = document.querySelector('.light-big');
         let lightSmallElement = document.querySelector('.light-small');
+        dashoffset = lengthAbout;
 
-        if (dashoffset > lengthAbout) {
-          dashoffset = lengthAbout;
-        } else if (dashoffset > 400 && dashoffset < 2300) {
-          dashoffset = lengthProjects;
-        } else if (dashoffset < 400) {
-          dashoffset += 1000;
-        }
+        // if (dashoffset > lengthAbout) {
+        //   dashoffset = lengthAbout;
+        // } else if (dashoffset > 400 && dashoffset < 2300) {
+        //   dashoffset = lengthProjects;
+        // } else if (dashoffset < 400) {
+        //   dashoffset += 1000;
+        // }
 
         if (dashoffset < 0) dashoffset = 0;
 

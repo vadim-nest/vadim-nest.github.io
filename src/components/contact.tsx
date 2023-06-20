@@ -17,7 +17,6 @@ import { ReactComponent as LinkedInIcon } from '../assets/linkedin.svg';
 
 import { useMediaQuery } from 'react-responsive';
 
-
 export default function Contact() {
   const isDesktop = useMediaQuery({ minWidth: 901 });
   const name = useRef<HTMLInputElement>(null);
@@ -65,7 +64,7 @@ export default function Contact() {
 
   return (
     <div id='contact-part'>
-      <h1 id='contach-header'>Contact me</h1>
+      <h1 id='contact-header'>Contact me</h1>
       <div className='contact-wrap'>
         <form className='contact-form' onSubmit={submit}>
           <div className='input-wrap'>
@@ -74,6 +73,7 @@ export default function Contact() {
               ref={name}
               className='contact-field'
               type='text'
+
               placeholder=' '
             />
             <label>Name *</label>
@@ -118,19 +118,23 @@ export default function Contact() {
 
           <input className='submit-button' type='submit' value='Send message' />
         </form>
-        {isDesktop && (<div className='contact-text'>
+        <div className='contact-text'>
+          <p>Interested in collaborating with me?</p>
           <p>
-            Interested in collaborating with me?
-          </p>
-          <p>
-            I'm always open to discussing
-            product design work or partnership opportunities.
+            I'm always open to discussing product design work or partnership
+            opportunities.
           </p>
           <div className='contact-buttons'>
             <a href='mailto:vadim@gne.me.uk' className='nav-button'>
               vadim@gne.me.uk
             </a>
-            <a href="../src/assets/VADIM-GNEZDYSHKIN-2023.pdf" className='nav-button' download="VADIM-GNEZDYSHKIN-2023.pdf">CV (pdf)</a>
+            <a
+              href='../src/assets/VADIM-GNEZDYSHKIN-2023.pdf'
+              className='nav-button'
+              download='VADIM-GNEZDYSHKIN-2023.pdf'
+            >
+              CV (pdf)
+            </a>
           </div>
           <div className='contact-links'>
             <div className='github-div'>
@@ -149,8 +153,7 @@ export default function Contact() {
               </a>
             </div>
           </div>
-        </div>)}
-
+        </div>
       </div>
     </div>
   );

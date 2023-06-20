@@ -25,16 +25,23 @@ nav {
 
 #nav-buttons {
   display: flex;
-  max-width: 65vw;
+  /* max-width: 65vw; */
+  /* justify-content: space-between; */
+}
+
+#nav-buttons .submit-button {
+  margin-right: 0px;
+  margin-left: 10px;
+  /* justify-content: space-between; */
 }
 
 .nav-button {
   background-color: var(--cod-gray-lighter);
   color: var(--white);
   border: 3px solid var(--cod-gray-lighter);
-  margin-right: 10px;
+  /* margin-right: 10px; */
   margin-left: 0px;
-  font-size: 18px;
+  font-size: 16px;
   cursor: pointer;
   font-family: 'Open Sans', sans-serif;
   transition: all 0.2s ease;
@@ -46,7 +53,8 @@ nav {
 
 .current-view {
   opacity: 0.87;
-  border-bottom: 3px solid var(--yellow-main);
+  transition: all 0.2s ease;
+  border-bottom: 2px solid var(--yellow-main);
 }
 
 @media (min-width: 280px) and (max-width: 359px) {
@@ -79,6 +87,4 @@ nav {
     margin-left: 10px;
     font-size: 18px;
   }
-
 }
-

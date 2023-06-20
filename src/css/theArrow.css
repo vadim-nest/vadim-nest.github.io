@@ -2,7 +2,7 @@
   /* position: absolute; */
   top: 0px;
   /* left: 5%; */
-  width: 90vw;
+  width: 100vw;
   /* transition: stroke-dashoffset 2s ease-out; */
 
 }
@@ -13,11 +13,11 @@ svg {
 }
 
 #wrap {
-  height: 100vh;
+  height: fit-content;
   position: absolute;
   top: 0;
   left: 6%;
-  width: 85vw;
+  width: 91.7vw;
   pointer-events: none;
 }
 

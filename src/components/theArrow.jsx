@@ -42,11 +42,13 @@ export default function TheArrow() {
         );
         let lightBigElement = document.querySelector('.light-big');
         let lightSmallElement = document.querySelector('.light-small');
+        dashoffset = lengthAbout;
+        // if (dashoffset > lengthAbout) dashoffset = lengthAbout;
+        // else if (dashoffset > 210 && dashoffset < 810)
+        //   dashoffset = lengthProjects;
+        // else if (dashoffset < 210) dashoffset += 200;
 
-        if (dashoffset > lengthAbout) dashoffset = lengthAbout;
-        else if (dashoffset > 210 && dashoffset < 810)
-          dashoffset = lengthProjects;
-        else if (dashoffset < 210) dashoffset += 200;
+        // if (dashoffset < 0) dashoffset = 0;
 
         if (arrowRightElement) {
           if (dashoffset === lengthProjects) {
@@ -90,7 +92,7 @@ export default function TheArrow() {
     <div id='wrap' ref={wrapRef}>
       <svg
         id='svg-arrow'
-        viewBox='0 0 370 1900'
+        viewBox='0 0 392 1900'
         fill='none'
         preserveAspectRatio='xMidYMax meet'
       >
@@ -124,7 +126,11 @@ export default function TheArrow() {
           d='M0,-15L0,-12L23,0L0,12L0,15'
           // visibility='hidden'
           transform='translate(254, 713) rotate(90)'
-          onClick={() => document.getElementById('projects-part')?.scrollIntoView({behavior: 'smooth'})}
+          onClick={() =>
+            document
+              .getElementById('projects-part')
+              ?.scrollIntoView({ behavior: 'smooth' })
+          }
         />
       </svg>
     </div>
