@@ -8,8 +8,8 @@ export default defineConfig({
   build: {
     outDir: 'dist',
   },
-  // server: {
-  //   host: '0.0.0.0',  // your local IP address
-  //   port: 3000,  // change this to your port
-  // },
+  server: {
+    host: '0.0.0.0',  // your local IP address
+    port: 3000,  // change this to your port
+  },
 })

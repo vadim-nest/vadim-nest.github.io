@@ -15,8 +15,9 @@ export default function Projects() {
   const flickityOptions = {
     prevNextButtons: false,
     wrapAround: true,
-    pageDots: true,
-    lazyLoad: true
+    pageDots: false,
+    lazyLoad: true,
+    bgLazyLoad: 1,
   };
 
   const [project, setProject] = useState(0);
@@ -192,6 +193,15 @@ export default function Projects() {
       <div id='arrows'>
         <div className='arrow-left' onClick={previousProject}>
           {imports.arrowNext}
+        </div>
+        <div id='project-circles'>
+          {projects.map((_, index) => (
+            <div
+              className={`project-circle ${
+                index === project ? 'selected-circle' : ''
+              }`}
+            ></div>
+          ))}
         </div>
         <div className='arrow-right' onClick={nextProject}>
           {imports.arrowNext}

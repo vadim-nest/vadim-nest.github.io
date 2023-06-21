@@ -17,10 +17,11 @@ export default function Navbar() {
     } else if (position === 'projects') {
       document.getElementById('projects-part')?.scrollIntoView({behavior: 'smooth'});
     } else if (position === 'contact') {
-      window.scrollTo({
-        top: contactPos * 1.25,
-        behavior: "smooth"
-      });
+      // window.scrollTo({
+      //   top: contactPos * 1.25,
+      //   behavior: "smooth"
+      // });
+      document.getElementById('arrows')?.scrollIntoView({behavior: 'smooth'});
     }
   };
 

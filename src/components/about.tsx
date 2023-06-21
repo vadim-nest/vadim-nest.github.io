@@ -3,6 +3,8 @@ import faceImg from '../assets/face2.jpg';
 import TheArrow from './theArrow';
 import TheArrowDesktop from './theArrowDesktop';
 import { useMediaQuery } from 'react-responsive';
+import { ReactComponent as GithubIcon } from '../assets/github.svg';
+import { ReactComponent as LinkedInIcon } from '../assets/linkedin.svg';
 
 export default function About() {
   const isDesktop = useMediaQuery({ minWidth: 901 });
@@ -16,8 +18,8 @@ export default function About() {
         <p className='h-e-text'>
           I create intuitive, end-to-end products with seamless user experiences
         </p>
-        <div className='about-buttons'>
-          <button
+        {/* <div className='about-buttons'> */}
+          {/* <button
             className='submit-button'
             onClick={() =>
               document
@@ -36,15 +38,29 @@ export default function About() {
             }
           >
             See projects
-          </button>
-        </div>
+          </button> */}
+          <div className='contact-links'>
+            <div className='github-div'>
+              <a href='https://github.com/vadim-nest' target='_blank'>
+                <GithubIcon />
+              </a>
+            </div>
+            <div className='linkedin-div'>
+              <a href='https://www.linkedin.com/in/vadim-nest/' target='_blank'>
+                <LinkedInIcon />
+              </a>
+            </div>
+            <div className='email-div'>
+              <a href='mailto:vadim@gne.me.uk' className='mail-icon'>
+                @
+              </a>
+            </div>
+          </div>
+        {/* </div> */}
       </div>
       <div id='face-img'>
         <img src={faceImg}></img>
       </div>
-      <div id='shape-1' className='rounded-circle scale-up-center'></div>
-      {/* <div id='shape-2' className='rounded-circle scale-up-center animation-delay-2000'></div> */}
-      <div id='shape-3' className='rounded-circle scale-up-center animation-delay-4000'></div>
     </div>
   );
 }

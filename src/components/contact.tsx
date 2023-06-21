@@ -6,9 +6,6 @@ const SERVICE_ID = import.meta.env.VITE_SERVICE_ID;
 const TEMPLATE_ID = import.meta.env.VITE_TEMPLATE_ID;
 const PUBLIC_KEY = import.meta.env.VITE_PUBLIC_KEY;
 
-import { ReactComponent as GithubIcon } from '../assets/github.svg';
-import { ReactComponent as LinkedInIcon } from '../assets/linkedin.svg';
-
 // TODO: Add proper styling
 // TODO: Have a loading animation when sending email
 // TODO: Some other text on the bottom
@@ -134,23 +131,6 @@ export default function Contact() {
             >
               CV (pdf)
             </a>
-          </div>
-          <div className='contact-links'>
-            <div className='github-div'>
-              <a href='https://github.com/vadim-nest' target='_blank'>
-                <GithubIcon />
-              </a>
-            </div>
-            <div className='linkedin-div'>
-              <a href='https://www.linkedin.com/in/vadim-nest/' target='_blank'>
-                <LinkedInIcon />
-              </a>
-            </div>
-            <div className='email-div'>
-              <a href='mailto:vadim@gne.me.uk' className='mail-icon'>
-                @
-              </a>
-            </div>
           </div>
         </div>
       </div>
