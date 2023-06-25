@@ -187,7 +187,6 @@ export default function Projects() {
             project
           ]
         }
-        {}
       </div>
 
       <div id='arrows'>

@@ -1,9 +1,12 @@
 import { useEffect } from 'react';
 import '../css/navbar.css';
+import { useMediaQuery } from 'react-responsive';
+
 
 // TODO: instead of vh, need to actually calculate the position of elements (using refs)
 
 export default function Navbar() {
+  const isDesktop = useMediaQuery({ minWidth: 901 });
   let vh = window.innerHeight;
 
   const aboutPos = 0;
@@ -17,11 +20,7 @@ export default function Navbar() {
     } else if (position === 'projects') {
       document.getElementById('projects-part')?.scrollIntoView({behavior: 'smooth'});
     } else if (position === 'contact') {
-      // window.scrollTo({
-      //   top: contactPos * 1.25,
-      //   behavior: "smooth"
-      // });
-      document.getElementById('arrows')?.scrollIntoView({behavior: 'smooth'});
+      document.getElementById('contact-part')?.scrollIntoView({behavior: 'smooth'});
     }
   };
 
@@ -37,13 +36,15 @@ export default function Navbar() {
       navButtons[0].className = 'nav-button current-view';
     } else if (
       scrollY + vh * 0.5 >= projectsPos &&
-      scrollY + vh * 0.5 < contactPos * 1.25
+      ((!isDesktop && scrollY + vh * 0.5 >= contactPos) || scrollY + vh * 0.5 < contactPos * 0.75)
     ) {
       navButtons[1].className = 'nav-button current-view';
-    } else if (scrollY + vh * 0.5 >= contactPos * 1.25) {
+    } else if ((!isDesktop && scrollY + vh * 0.5 >= contactPos) || scrollY + vh * 0.5 >= contactPos * 0.75) {
       navButtons[2].className = 'nav-button current-view';
     }
   };
+
+
 
   useEffect(() => {
     handleNavScroll();
