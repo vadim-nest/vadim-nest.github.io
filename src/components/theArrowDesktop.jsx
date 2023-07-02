@@ -131,7 +131,11 @@ export default function TheArrowDesktop() {
           d='M0,-15L0,-12L23,0L0,12L0,15'
           // visibility='hidden'
           transform='translate(754, 850) rotate(90) scale(1.4)'
-          onClick={() => handleNavClick()}
+          onClick={() =>
+            document
+              .getElementById('projects-part')
+              ?.scrollIntoView({ behavior: 'smooth' })
+          }
         />
       </svg>
     </div>

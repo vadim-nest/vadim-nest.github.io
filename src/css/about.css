@@ -198,9 +198,8 @@
   .about-buttons {
     flex-direction: row;
     width: 100%;
-
+    margin-top: 40px;
   }
-
 
   .about-buttons .submit-button {
     width: fit-content;

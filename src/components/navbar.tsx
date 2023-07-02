@@ -2,54 +2,52 @@ import { useEffect } from 'react';
 import '../css/navbar.css';
 import { useMediaQuery } from 'react-responsive';
 
-
-// TODO: instead of vh, need to actually calculate the position of elements (using refs)
-
 export default function Navbar() {
   const isDesktop = useMediaQuery({ minWidth: 901 });
-  let vh = window.innerHeight;
+  const vh = window.innerHeight;
 
-  const aboutPos = 0;
-  let projectsPos = vh;
-  let contactPos = vh * 2;
+  const nav = {
+    about: { name: 'About', id: 'welcome-part', position: 0 },
+    project: { name: 'Projects', id: 'projects-part', position: vh },
+    contact: { name: 'Contact', id: 'contact-part', position: vh * 2 },
+  };
 
-  const handleNavClick = (position: string) => {
-    // ref.current.scrollIntoView({ behavior: 'smooth' });
-    if (position === 'about') {
-      document.getElementById('welcome-part')?.scrollIntoView({behavior: 'smooth'});
-    } else if (position === 'projects') {
-      document.getElementById('projects-part')?.scrollIntoView({behavior: 'smooth'});
-    } else if (position === 'contact') {
-      document.getElementById('contact-part')?.scrollIntoView({behavior: 'smooth'});
+  const handleNavClick = (navItem: any) => {
+    if (navItem) {
+      document
+        .getElementById(navItem.id)
+        ?.scrollIntoView({ behavior: 'smooth' });
     }
   };
 
   const handleNavScroll = () => {
     const { scrollY } = window;
+    const adjScrollVh = scrollY + vh * 0.5;
     const navButtons = document.querySelectorAll('.nav-button');
-
-    // Reset all button classes to 'dis-text'
     navButtons.forEach((btn) => (btn.className = 'nav-button dis-text'));
 
-    // Depending on the scroll position, set one button's class to 'h-e-text'
-    if (scrollY + vh * 0.5 >= aboutPos && scrollY + vh * 0.5 < projectsPos) {
+    if (
+      adjScrollVh >= nav.about.position &&
+      adjScrollVh < nav.project.position
+    ) {
       navButtons[0].className = 'nav-button current-view';
     } else if (
-      scrollY + vh * 0.5 >= projectsPos &&
-      ((!isDesktop && scrollY + vh * 0.5 >= contactPos) || scrollY + vh * 0.5 < contactPos * 0.75)
+      adjScrollVh >= nav.project.position &&
+      ((!isDesktop && adjScrollVh < nav.contact.position) ||
+        (isDesktop && adjScrollVh < nav.contact.position * 0.9))
     ) {
       navButtons[1].className = 'nav-button current-view';
-    } else if ((!isDesktop && scrollY + vh * 0.5 >= contactPos) || scrollY + vh * 0.5 >= contactPos * 0.75) {
+    } else if (
+      (!isDesktop && adjScrollVh >= nav.contact.position) ||
+      (isDesktop && adjScrollVh >= nav.contact.position * 0.9)
+    ) {
       navButtons[2].className = 'nav-button current-view';
     }
   };
 
-
-
   useEffect(() => {
     handleNavScroll();
     window.addEventListener('scroll', handleNavScroll);
-    // Cleanup on unmount
     return () => {
       window.removeEventListener('scroll', handleNavScroll);
     };
@@ -57,29 +55,17 @@ export default function Navbar() {
 
   return (
     <nav>
-      <div id='navbar'>
-        <h2 id='logo' className='h-e-text'>
-          VG
-        </h2>
-        <div id='nav-buttons'>
-          <button
-            className='nav-button dis-text'
-            onClick={() => handleNavClick('about')}
-          >
-            About
-          </button>
-          <button
-            className='nav-button dis-text'
-            onClick={() => handleNavClick('projects')}
-          >
-            Projects
-          </button>
-          <button
-            className='nav-button dis-text'
-            onClick={() => handleNavClick('contact')}
-          >
-            Contact
-          </button>
+      <div className='navbar'>
+        <h2 className='logo h-e-text'>VG</h2>
+        <div className='nav-buttons'>
+          {Object.values(nav).map((navItem) => (
+            <button
+              className='nav-button dis-text'
+              onClick={() => handleNavClick(navItem)}
+            >
+              {navItem.name}
+            </button>
+          ))}
         </div>
       </div>
     </nav>

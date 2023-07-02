@@ -34,17 +34,6 @@ const projects: Project[] = [
     },
   },
   {
-    name: '#newsBuzz',
-    description:
-      'Stay up-to-date on local news by browsing through trending hashtags and clicking on them to read more.',
-    frontStack: ['JavaScript', 'React', 'CSS', 'Mapbox API', 'Figma'],
-    backStack: ['Node.js', 'Axios', 'Express.js', 'PostgreSQL', 'Sequelize'],
-    videoSRC: newsbuzzVideo,
-    links: {
-      github: 'https://github.com/vadim-nest/Newsbuzz',
-    },
-  },
-  {
     name: 'aTYPEical',
     description:
       'An application focused on improving typing skills and speed. Features include personalised practice, real-time progress tracking, and customisable practice texts.',
@@ -69,6 +58,17 @@ const projects: Project[] = [
     links: {
       github: 'https://github.com/majilaii/aTypeical',
       website: 'https://atypeical.netlify.app/',
+    },
+  },
+  {
+    name: '#newsBuzz',
+    description:
+      'Stay up-to-date on local news by browsing through trending hashtags and clicking on them to read more.',
+    frontStack: ['JavaScript', 'React', 'CSS', 'Mapbox API', 'Figma'],
+    backStack: ['Node.js', 'Axios', 'Express.js', 'PostgreSQL', 'Sequelize'],
+    videoSRC: newsbuzzVideo,
+    links: {
+      github: 'https://github.com/vadim-nest/Newsbuzz',
     },
   },
 ];

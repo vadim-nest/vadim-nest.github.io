@@ -260,6 +260,13 @@
   .contact-form .submit-button {
     margin-right: 200px;
     width: 35%;
+    cursor: pointer;
+    border-width: 3.5px;
+  }
+
+  .contact-form .submit-button:hover {
+    border-radius: 7px;
+
   }
 
   .contact-field {

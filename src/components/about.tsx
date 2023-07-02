@@ -1,5 +1,5 @@
 import '../css/about.css';
-import faceImg from '../assets/face2.jpg';
+import faceImg from '../assets/face.jpg';
 import TheArrow from './theArrow';
 import TheArrowDesktop from './theArrowDesktop';
 import { useMediaQuery } from 'react-responsive';
@@ -18,27 +18,6 @@ export default function About() {
         <p className='h-e-text'>
           I create intuitive, end-to-end products with seamless user experiences
         </p>
-        {/* <div className='about-buttons'> */}
-          {/* <button
-            className='submit-button'
-            onClick={() =>
-              document
-                .getElementById('contact-part')
-                ?.scrollIntoView({ behavior: 'smooth' })
-            }
-          >
-            Contact
-          </button>
-          <button
-            className='nav-button'
-            onClick={() =>
-              document
-                .getElementById('projects-part')
-                ?.scrollIntoView({ behavior: 'smooth' })
-            }
-          >
-            See projects
-          </button> */}
           <div className='contact-links'>
             <div className='github-div'>
               <a href='https://github.com/vadim-nest' target='_blank'>
@@ -56,7 +35,6 @@ export default function About() {
               </a>
             </div>
           </div>
-        {/* </div> */}
       </div>
       <div id='face-img'>
         <img src={faceImg}></img>
