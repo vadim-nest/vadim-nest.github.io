@@ -38,7 +38,6 @@
   margin-top: 9vh;
   z-index: 1;
   border: 4px dashed var(--yellow-main);
-  border-bottom: no;
 }
 
 .project-description h2 {
@@ -93,6 +92,8 @@
   display: flex;
   flex-direction: row;
   flex-wrap: nowrap;
+  -webkit-box-flex: 0;
+  -webkit-flex-wrap: nowrap;
 }
 
 .bubble-img {
@@ -368,30 +369,29 @@
     margin-left: 3px;
     margin-right: 3px;
     display: flex;
+    display: -webkit-flex;
     flex-direction: row;
+    flex-wrap: nowrap;
+    -webkit-box-flex: 0;
+    -webkit-flex-wrap: nowrap;
   }
 
   .bubble-img {
     height: 20px;
     padding: 5px 10px 5px 0px;
-  }
-
-  .bubble p {
-    font-family: 'Montserrat', sans-serif;
-    margin: auto 0px auto 0px;
-    height: fit-content;
+    overflow: hidden;
   }
 
   .bubble:hover {
     transition: all 0.2s ease;
     transform: scale(1.05);
-
   }
 
   .bubble p {
     font-family: 'Montserrat', sans-serif;
     margin: auto 0px auto 0px;
     height: fit-content;
+    white-space: nowrap;
   }
 
   .links {
