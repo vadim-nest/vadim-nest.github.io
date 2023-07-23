@@ -213,7 +213,7 @@
 
 .arrow-right path {
   fill: var(--yellow-main);
-  fill-opacity: 0.87;
+  fill-opacity: 1;
 }
 
 .arrow-left:hover,
@@ -449,7 +449,6 @@
 
   .arrow-right :last-of-type {
     fill: var(--yellow-main);
-    fill-opacity: 0.87;
   }
 }
 

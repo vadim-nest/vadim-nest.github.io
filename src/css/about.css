@@ -1,9 +1,8 @@
 #welcome-part {
-  /* min-height: 800px; */
   height: 660px;
 }
 
-#about-text {
+.about-text {
   padding-top: 25%;
   text-align: center;
   margin-bottom: 10%;
@@ -11,70 +10,14 @@
   position: relative;
 }
 
-#about-text h2 {
+.about-text h2 {
   margin-top: 0px;
   margin-bottom: 0px;
 }
 
-#about-text p {
+.about-text p {
   margin: 10px auto 15px auto;
   width: 80vw;
-}
-
-.about-buttons {
-  display: flex;
-  flex-direction: row-reverse;
-  justify-content: space-around;
-  width: 80%;
-  margin-left: auto;
-  margin-top: 20px;
-  margin-right: auto;
-}
-
-.about-buttons .nav-button {
-  font-size: 16px;
-  opacity: 0.87;
-  margin: 0;
-  background-color: transparent;
-  border: none;
-}
-
-.about-buttons .submit-button {
-  font-size: 16px;
-  width: fit-content;
-  padding-left: 30px;
-  padding-right: 30px;
-  margin: 0;
-  background-color: transparent;
-  box-shadow: none;
-}
-
-.about-buttons .nav-button:after {
-  content: '';
-  display: block;
-  margin: auto;
-  height: 3px;
-  width: 0px;
-  background: transparent;
-  transition: width 0.3s ease, background-color 0.3s ease;
-  margin-top: 10px;
-}
-.about-buttons .nav-button:after {
-  width: 100%;
-  background: var(--yellow-main);
-}
-
-#face-img {
-  width: fit-content;
-  margin-left: auto;
-  margin-right: auto;
-}
-
-#face-img img {
-  width: 47vw;
-  border-radius: 50%;
-  position: relative;
-  z-index: 1;
 }
 
 .contact-links {
@@ -115,6 +58,18 @@
   color: var(--yellow-main);
 }
 
+#face-img {
+  width: fit-content;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+#face-img img {
+  width: 47vw;
+  border-radius: 50%;
+  position: relative;
+  z-index: 1;
+}
 
 .the-arrow {
   position: fixed;
@@ -124,46 +79,8 @@
   margin-left: 4%;
 }
 
-@media (min-width: 0px) and (max-width: 359px) {
-  #about-text {
-    /* padding-top: 50%; */
-    /* margin-bottom: 10%; */
-    /* font-size: 15px; */
-  }
-
-  #about-text h2 {
-    /* font-size: 22px; */
-  }
-}
-
-@media (min-width: 360px) and (max-width: 390px) {
-  #about-text {
-    /* padding-top: 50%; */
-    /* margin-bottom: 10%; */
-  }
-}
-
-@media (min-width: 391px) and (max-width: 460px) {
-  #about-text {
-    /* margin-bottom: 25%; */
-  }
-}
-
-@media (min-width: 460px) and (max-width: 576px) {
-  #about-text {
-    /* margin-bottom: 30%; */
-  }
-}
-
-/* Small laptops */
-@media (min-width: 901px) and (max-width: 1200px) {
-}
-
-/* Desktop monitors */
-/* @media (min-width: 1201px) { */
 @media (min-width: 901px) {
   #welcome-part {
-    /* height: 82vh; */
     height: 920px;
     max-width: 1000px;
     margin-left: auto;
@@ -173,7 +90,7 @@
     position: relative;
   }
 
-  #about-text {
+  .about-text {
     padding-top: 335px;
     margin-bottom: 20%;
     margin-right: 100px;
@@ -182,7 +99,7 @@
     max-width: 340px;
   }
 
-  #about-text p {
+  .about-text p {
     width: 400px;
   }
 
@@ -194,44 +111,6 @@
   #face-img img {
     width: 220px;
   }
-
-  .about-buttons {
-    flex-direction: row;
-    width: 100%;
-    margin-top: 40px;
-  }
-
-  .about-buttons .submit-button {
-    width: fit-content;
-    padding: 0 30px;
-    border-width: 3.5px;
-    cursor: pointer;
-  }
-
-  .about-buttons .submit-button:hover {
-    border-radius: 7px;
-  }
-
-  .about-buttons .nav-button {
-    opacity: 0.87;
-    margin-left: 40px;
-    width: fit-content;
-  }
-
-  .about-buttons .nav-button:after {
-    content: '';
-    display: block;
-    margin: auto;
-    height: 3px;
-    width: 0px;
-    background: transparent;
-    transition: width 0.3s ease, background-color 0.3s ease;
-    margin-top: 10px;
-  }
-  .about-buttons .nav-button:after {
-    width: 100%;
-    background: var(--yellow-main);
-  }
 }
 
 @media screen and (min-width: 901px) and (min-height: 800px) and (max-height: 1000px) {
@@ -239,7 +118,7 @@
     height: 105vh;
   }
 
-  #about-text {
+  .about-text {
     padding-top: 300px;
   }
 
